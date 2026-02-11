@@ -13,7 +13,7 @@ const AboutSection = () => {
           transition={{ duration: 0.8 }}
           className="text-3xl md:text-4xl lg:text-5xl font-light text-foreground max-w-4xl mx-auto leading-relaxed"
         >
-          El concepto único de Signature se inspira en la integración perfecta entre arquitectura, naturaleza y el arte de vivir.
+          El concepto único de Cristina Granda se inspira en la integración perfecta entre arquitectura, naturaleza y el arte de vivir.
         </motion.h2>
       </div>
 

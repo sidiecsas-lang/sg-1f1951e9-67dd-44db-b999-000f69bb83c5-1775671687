@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import aboutTeam from "@/assets/about-team.jpg";
+import { Link } from "react-router-dom";
+import cristinaImg from "@/assets/cristina-granda.png";
 
 const AboutSection = () => {
   return (
@@ -25,13 +26,16 @@ const AboutSection = () => {
         className="px-6 md:px-12 max-w-6xl mx-auto"
       >
         <div className="relative overflow-hidden aspect-[16/9]">
-          <img src={aboutTeam} alt="Equipo Signature" className="w-full h-full object-cover" />
+          <img src={cristinaImg} alt="Cristina Granda, Arquitecta" className="w-full h-full object-cover object-top" />
           <div className="absolute inset-0 bg-background/20" />
         </div>
         <div className="mt-8 text-center">
-          <button className="border border-foreground/40 px-8 py-3 text-xs tracking-luxury uppercase text-foreground/80 hover:bg-foreground/10 transition-all duration-300">
+          <Link
+            to="/nosotros"
+            className="border border-foreground/40 px-8 py-3 text-xs tracking-luxury uppercase text-foreground/80 hover:bg-foreground/10 transition-all duration-300 inline-block"
+          >
             Conocer más sobre nosotros
-          </button>
+          </Link>
         </div>
       </motion.div>
     </section>

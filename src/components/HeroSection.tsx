@@ -22,7 +22,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-xs tracking-wide-luxury uppercase text-foreground/70 mb-6"
         >
-          Diseño Arquitectónico & Construcción
+          High – End Architecture
         </motion.p>
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -30,9 +30,9 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.4 }}
           className="text-5xl md:text-7xl lg:text-8xl font-light text-foreground tracking-luxury leading-tight"
         >
-          NUEVOS
+          CRISTINA
           <br />
-          PROYECTOS
+          GRANDA, ARQ
         </motion.h1>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

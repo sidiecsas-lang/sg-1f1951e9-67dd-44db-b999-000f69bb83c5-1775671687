@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import { useEffect } from "react";
 
 const projects = [
   { year: "2014", name: "Conjunto Hab Los Quindes", detail: "70 viviendas, Ambato" },
@@ -13,6 +14,10 @@ const projects = [
 ];
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Top bar */}
@@ -38,7 +43,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="relative overflow-hidden aspect-[3/4] max-w-md">
-              <img src="/cristina-granda-about.jpg" alt="Cristina Granda" className="w-full h-full object-cover object-top" />
+              <img src="/cristina-granda-bw.jpg" alt="Cristina Granda" className="w-full h-full object-cover object-top" />
               <div className="absolute inset-0 bg-background/10" />
             </div>
           </motion.div>

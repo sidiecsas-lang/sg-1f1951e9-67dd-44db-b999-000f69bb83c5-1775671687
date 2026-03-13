@@ -5,7 +5,7 @@ import spacesCoastal from "@/assets/spaces-coastal.jpg";
 import spacesUrban from "@/assets/spaces-urban.jpg";
 
 const spaces = [
-  { title: "VIVIR FRENTE AL MAR", subtitle: "Proyectos costeros que integran arquitectura y naturaleza", image: spacesCoastal },
+  { title: "DISEÑO QUE TRASCIENDE", subtitle: "Proyectos que integran arquitectura, naturaleza y el arte de vivir", image: spacesCoastal },
   { title: "ELEGANCIA URBANA", subtitle: "Residencias que redefinen el lujo en la ciudad", image: spacesUrban },
 ];
 

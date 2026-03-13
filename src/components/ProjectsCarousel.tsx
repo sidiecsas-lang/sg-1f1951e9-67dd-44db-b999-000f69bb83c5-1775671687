@@ -6,9 +6,9 @@ import projectPenthouse from "@/assets/project-penthouse.jpg";
 import projectMountain from "@/assets/project-mountain.jpg";
 
 const projects = [
-  { name: "VILLA MEDITERRÁNEA", location: "Costa del Sol", image: projectVilla },
-  { name: "PENTHOUSE URBANO", location: "Madrid", image: projectPenthouse },
-  { name: "CASA DE MONTAÑA", location: "Sierra Nevada", image: projectMountain },
+  { name: "GUAYLLABAMBA GARDENS", location: "Vivienda Multifamiliar", image: projectVilla },
+  { name: "MIRANO VALLEY", location: "Vivienda Multifamiliar", image: projectPenthouse },
+  { name: "RESIDENCIA DEL ENCANTO", location: "Vivienda Unifamiliar", image: projectMountain },
 ];
 
 const ProjectsCarousel = () => {

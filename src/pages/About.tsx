@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import cristinaImg from "@/assets/cristina-granda.png";
 
 const projects = [
   { year: "2014", name: "Conjunto Hab Los Quindes", detail: "70 viviendas, Ambato" },
@@ -39,7 +38,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="relative overflow-hidden aspect-[3/4] max-w-md">
-              <img src={cristinaImg} alt="Cristina Granda" className="w-full h-full object-cover object-top" />
+              <img src="/cristina-granda.png" alt="Cristina Granda" className="w-full h-full object-cover object-top" />
               <div className="absolute inset-0 bg-background/10" />
             </div>
           </motion.div>

@@ -38,7 +38,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="relative overflow-hidden aspect-[3/4] max-w-md">
-              <img src="/cristina-granda.png" alt="Cristina Granda" className="w-full h-full object-cover object-top" />
+              <img src="/cristina-granda-about.jpg" alt="Cristina Granda" className="w-full h-full object-cover object-top" />
               <div className="absolute inset-0 bg-background/10" />
             </div>
           </motion.div>

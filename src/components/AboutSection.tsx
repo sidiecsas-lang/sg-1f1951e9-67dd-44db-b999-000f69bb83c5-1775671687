@@ -25,8 +25,8 @@ const AboutSection = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="px-6 md:px-12 max-w-6xl mx-auto"
       >
-        <div className="relative overflow-hidden aspect-[16/9] max-w-3xl mx-auto">
-          <img src={cristinaImg} alt="Cristina Granda, Arquitecta" className="w-full h-full object-cover object-top scale-105" />
+        <div className="relative overflow-hidden aspect-[4/3] max-w-2xl mx-auto">
+          <img src={cristinaImg} alt="Cristina Granda, Arquitecta" className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-background/20" />
         </div>
         <div className="mt-8 text-center">

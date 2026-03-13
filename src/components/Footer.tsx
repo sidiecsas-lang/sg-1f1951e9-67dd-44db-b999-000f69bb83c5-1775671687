@@ -26,9 +26,10 @@ const Footer = () => {
           <div>
             <h5 className="text-xs tracking-luxury uppercase text-foreground mb-4">Contacto</h5>
             <div className="flex flex-col gap-3 text-sm text-muted-foreground">
-              <span>info@signature-arq.com</span>
-              <span>+34 900 123 456</span>
-              <span>Calle Serrano 45, Madrid</span>
+              <span>cristina_granda@outlook.com</span>
+              <span>09 84 555 979</span>
+              <span>Quito, Ecuador</span>
+              <span>@cristina.granda.t</span>
             </div>
           </div>
         </div>

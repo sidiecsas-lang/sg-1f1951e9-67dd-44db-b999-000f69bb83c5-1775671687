@@ -27,7 +27,7 @@ const projectsTimeline: ProjectDetail[] = [
     area: "8.968 m²",
     location: "Ambato, Ecuador",
     category: "residential",
-    image: "/LasRetamas.jpg" // Imagen de ejemplo dejada a propósito
+    image: "/LasRetamas.jpg"
   },
   {
     year: "2015",
@@ -36,7 +36,8 @@ const projectsTimeline: ProjectDetail[] = [
     floors: "2 pisos",
     area: "115 m²",
     location: "Quito, Ecuador",
-    category: "residential"
+    category: "residential",
+    image: "/ReresidenciaDelEncanto.jpg"
   },
   {
     year: "2016",
@@ -46,7 +47,8 @@ const projectsTimeline: ProjectDetail[] = [
     floors: "3 pisos",
     area: "177 m²",
     location: "Quito, Ecuador",
-    category: "residential"
+    category: "residential",
+    image: "/ResidenciaSantaClara.png"
   },
   {
     year: "2017",
@@ -56,7 +58,8 @@ const projectsTimeline: ProjectDetail[] = [
     floors: "8 pisos y 3 subsuelos",
     area: "8.570 m²",
     location: "Quito, Ecuador",
-    category: "residential"
+    category: "residential",
+    image: "/ResidenciaMantoVerde.jpg"
   },
   {
     year: "2018",
@@ -66,7 +69,8 @@ const projectsTimeline: ProjectDetail[] = [
     floors: "2 pisos",
     area: "27.115 m²",
     location: "Quito, Ecuador",
-    category: "residential"
+    category: "residential",
+    image: "/VillaLago.jpg"
   },
   {
     year: "2019",
@@ -76,7 +80,8 @@ const projectsTimeline: ProjectDetail[] = [
     floors: "2 pisos",
     area: "877 m²",
     location: "Quito, Ecuador",
-    category: "residential"
+    category: "residential",
+    image: "/ResidenciaUnSoloAndar.jpg"
   },
   {
     year: "2019",
@@ -86,7 +91,8 @@ const projectsTimeline: ProjectDetail[] = [
     floors: "4 pisos y 1 subsuelo",
     area: "3.511 m²",
     location: "Quito, Ecuador",
-    category: "residential"
+    category: "residential",
+    image: "/ResidenciaDorada.png"
   },
   {
     year: "2019",
@@ -96,7 +102,8 @@ const projectsTimeline: ProjectDetail[] = [
     floors: "4 pisos",
     area: "792 m²",
     location: "Quito, Ecuador",
-    category: "residential"
+    category: "residential",
+    image: "/ResidenciaDeUnMusico.png"
   },
   {
     year: "2020",
@@ -105,7 +112,8 @@ const projectsTimeline: ProjectDetail[] = [
     floors: "1 y 2 pisos",
     area: "862 m²",
     location: "Cotacachi, Ecuador",
-    category: "commercial"
+    category: "commercial",
+    image: "/LaCasaDelPrioste.jpg"
   },
   {
     year: "2020",
@@ -114,7 +122,8 @@ const projectsTimeline: ProjectDetail[] = [
     floors: "1 y 2 pisos",
     area: "274 m²",
     location: "Guayllabamba, Ecuador",
-    category: "mixed"
+    category: "mixed",
+    image: "/ResidenciaTragaluz.png"
   },
   {
     year: "2021",
@@ -124,7 +133,8 @@ const projectsTimeline: ProjectDetail[] = [
     floors: "3 pisos",
     area: "177 m²",
     location: "Quito, Ecuador",
-    category: "residential"
+    category: "residential",
+    image: "/GuayllabambaGardens.png"
   },
   {
     year: "2021",
@@ -134,7 +144,8 @@ const projectsTimeline: ProjectDetail[] = [
     floors: "4 pisos",
     area: "635 m²",
     location: "Quito, Ecuador",
-    category: "mixed"
+    category: "mixed",
+    image: "/MarinoValley.jpg"
   }
 ];
 
@@ -216,7 +227,6 @@ const Projects = () => {
           className="mb-20 space-y-6"
         >
           <div className="flex flex-col md:flex-row gap-8">
-            {/* Filtro por año */}
             <div className="flex-1">
               <label className="text-sm tracking-luxury uppercase text-muted-foreground mb-4 block">
                 Filtrar por Año
@@ -244,7 +254,6 @@ const Projects = () => {
               </div>
             </div>
 
-            {/* Filtro por categoría */}
             <div className="flex-1">
               <label className="text-sm tracking-luxury uppercase text-muted-foreground mb-4 block">
                 Filtrar por Tipo
@@ -321,10 +330,10 @@ const Projects = () => {
                     {/* Timeline dot central */}
                     <div className="absolute left-8 md:left-1/2 md:-translate-x-1/2 w-3 h-3 rounded-full bg-primary ring-8 ring-background z-10 hidden md:block" />
 
-                    {/* El Lado del Año (Opuesto a la tarjeta en desktop) */}
+                    {/* El Lado del Año */}
                     <div className={`hidden md:flex w-1/2 ${index % 2 === 0 ? "justify-end text-right" : "justify-start text-left"}`}>
-                      {/* Aquí el año ahora tiene un color más claro (text-foreground/15) para no perderse en el fondo oscuro */}
-                      <div className="font-heading text-7xl md:text-8xl lg:text-[10rem] font-bold text-foreground/15 select-none drop-shadow-sm">
+                      {/* Año con opacidad ajustada para buena visibilidad sin perder elegancia */}
+                      <div className="font-heading text-7xl md:text-8xl lg:text-[10rem] font-bold text-foreground/20 select-none drop-shadow-sm">
                         {project.year}
                       </div>
                     </div>
@@ -340,7 +349,7 @@ const Projects = () => {
                         onClick={() => setSelectedProject(project)}
                         className={`w-full text-left group bg-card border border-border hover:border-primary/50 transition-all duration-500 overflow-hidden cursor-pointer rounded-xl shadow-sm hover:shadow-xl`}
                       >
-                        {/* Imagen de la tarjeta o Placeholder */}
+                        {/* Imagen de la tarjeta */}
                         <div className="relative h-64 w-full overflow-hidden bg-muted flex items-center justify-center">
                            {project.image ? (
                              <img 
@@ -439,7 +448,7 @@ const Projects = () => {
             >
               {/* Contenido scrolleable */}
               <div className="overflow-y-auto flex-1">
-                {/* Header Image o Placeholder */}
+                {/* Header Image */}
                 <div className="relative h-64 md:h-80 w-full bg-muted flex items-center justify-center">
                   {selectedProject.image ? (
                     <img 
@@ -464,7 +473,7 @@ const Projects = () => {
                 </div>
 
                 <div className="px-6 md:px-10 pb-10">
-                  {/* Título (superpuesto a la imagen) */}
+                  {/* Título */}
                   <div className="-mt-16 relative z-10 mb-8">
                     <Badge className={`mb-4 shadow-md ${getCategoryColor(selectedProject.category)}`}>
                       {getCategoryIcon(selectedProject.category)}

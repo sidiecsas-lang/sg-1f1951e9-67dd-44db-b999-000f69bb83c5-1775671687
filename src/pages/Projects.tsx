@@ -1,6 +1,7 @@
+<![CDATA[
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Building2, Home, Hotel, TreePine, X, Calendar, MapPin, Layers, Maximize } from "lucide-react";
+import { ArrowLeft, Building2, Home, Hotel, TreePine, X, Calendar, MapPin, Layers, Maximize, ExternalLink } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -14,125 +15,138 @@ interface ProjectDetail {
   area: string;
   location: string;
   category: "residential" | "commercial" | "mixed";
+  image: string;
 }
 
 const projectsTimeline: ProjectDetail[] = [
   {
     year: "2014",
-    name: "Conjunto Habitacional \"Los Quindes\"",
+    name: 'Conjunto Habitacional "Los Quindes"',
     type: "Conjunto Habitacional",
     units: "70 viviendas",
     floors: "2 pisos",
     area: "8.968 m²",
     location: "Ambato, Ecuador",
-    category: "residential"
+    category: "residential",
+    image: "/LasRetamas.jpg"
   },
   {
     year: "2015",
-    name: "Residencia \"Myriam Cando Peña\"",
+    name: 'Residencia "Myriam Cando Peña"',
     type: "Residencia Unifamiliar",
     floors: "2 pisos",
     area: "115 m²",
     location: "Quito, Ecuador",
-    category: "residential"
+    category: "residential",
+    image: "/ReresidenciaDelEncanto.jpg"
   },
   {
     year: "2016",
-    name: "Residencia \"Chablay Trujillo\"",
+    name: 'Residencia "Chablay Trujillo"',
     type: "Residencia Multifamiliar",
     units: "3 unidades",
     floors: "3 pisos",
     area: "177 m²",
     location: "Quito, Ecuador",
-    category: "residential"
+    category: "residential",
+    image: "/ResidenciaSantaClara.png"
   },
   {
     year: "2017",
-    name: "Edificio \"San Gregorio Plaza\"",
+    name: 'Edificio "San Gregorio Plaza"',
     type: "Edificio Residencial",
     units: "47 unidades",
-    floors: "8 pisos y 3 subsuelos de parqueaderos",
+    floors: "8 pisos y 3 subsuelos",
     area: "8.570 m²",
     location: "Quito, Ecuador",
-    category: "residential"
+    category: "residential",
+    image: "/ResidenciaMantoVerde.jpg"
   },
   {
     year: "2018",
-    name: "Modificatorio \"Orquídeas de San Rafael\"",
+    name: 'Modificatorio "Orquídeas de San Rafael"',
     type: "Conjunto Habitacional",
     units: "156 viviendas",
     floors: "2 pisos",
     area: "27.115 m²",
     location: "Quito, Ecuador",
-    category: "residential"
+    category: "residential",
+    image: "/VillaLago.jpg"
   },
   {
     year: "2019",
-    name: "\"Residenciales Montresor\"",
+    name: '"Residenciales Montresor"',
     type: "Conjunto Habitacional",
     units: "8 residencias",
     floors: "2 pisos",
     area: "877 m²",
     location: "Quito, Ecuador",
-    category: "residential"
+    category: "residential",
+    image: "/ResidenciaUnSoloAndar.jpg"
   },
   {
     year: "2019",
-    name: "\"Terrazas de Sión\"",
+    name: '"Terrazas de Sión"',
     type: "Conjunto Habitacional",
     units: "21 unidades",
-    floors: "4 pisos y 1 subsuelo de parqueaderos",
+    floors: "4 pisos y 1 subsuelo",
     area: "3.511 m²",
     location: "Quito, Ecuador",
-    category: "residential"
+    category: "residential",
+    image: "/ResidenciaDorada.png"
   },
   {
     year: "2019",
-    name: "\"Terrazas de Conocoto\"",
+    name: '"Terrazas de Conocoto"',
     type: "Conjunto Habitacional",
     units: "6 unidades",
     floors: "4 pisos",
     area: "792 m²",
     location: "Quito, Ecuador",
-    category: "residential"
+    category: "residential",
+    image: "/ResidenciaDeUnMusico.png"
   },
   {
     year: "2020",
-    name: "\"La Isla\" Lodge",
+    name: '"La Isla" Lodge',
     type: "Complejo Hotel Lodge",
     floors: "1 y 2 pisos",
     area: "862 m²",
     location: "Cotacachi, Ecuador",
-    category: "commercial"
+    category: "commercial",
+    image: "/LaCasaDelPrioste.jpg"
   },
   {
     year: "2020",
-    name: "\"Aquaponic INGSA\"",
+    name: '"Aquaponic INGSA"',
     type: "Complejo y Residencial",
     floors: "1 y 2 pisos",
     area: "274 m²",
     location: "Guayllabamba, Ecuador",
-    category: "mixed"
+    category: "mixed",
+    image: "/ResidenciaTragaluz.png"
   },
   {
     year: "2021",
-    name: "Residencia \"Tatiana León\"",
+    name: 'Residencia "Tatiana León"',
     type: "Residencia Multifamiliar",
     units: "2 unidades",
     floors: "3 pisos",
     area: "177 m²",
     location: "Quito, Ecuador",
-    category: "residential"
+    category: "residential",
+    image: "/GuayllabambaGardens.png"
   },
   {
     year: "2021",
-    name: "\"Nativa Crops\" Oficinas y Residencial",
+    name: '"Nativa Crops" Oficinas',
     type: "Oficinas y Residencial",
     units: "5 unidades",
     floors: "4 pisos",
     area: "635 m²",
     location: "Quito, Ecuador",
-    category: "mixed"
+    category: "mixed",
+    image: "/MarinoValley.jpg"
   }
 ];
 
@@ -182,8 +196,12 @@ const Projects = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="relative h-[40vh] bg-gradient-to-b from-muted/30 to-background flex items-center justify-center">
-        <div className="absolute top-8 left-6 md:left-12">
+      <div className="relative h-[40vh] bg-gradient-to-b from-muted/30 to-background flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-10">
+           <img src="/LasRetamas.jpg" alt="Background" className="w-full h-full object-cover" />
+           <div className="absolute inset-0 bg-background/80" />
+        </div>
+        <div className="absolute top-8 left-6 md:left-12 z-10">
           <Link to="/" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
             <ArrowLeft size={16} />
             <span className="tracking-luxury uppercase">Volver</span>
@@ -194,25 +212,25 @@ const Projects = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center px-6"
+          className="text-center px-6 relative z-10"
         >
-          <h1 className="font-heading text-5xl md:text-7xl mb-4 text-foreground">Proyectos de Planificación</h1>
-          <p className="text-muted-foreground tracking-luxury">Arquitectónica 2014 - 2021</p>
+          <h1 className="font-heading text-5xl md:text-7xl mb-4 text-foreground drop-shadow-md">Proyectos Arquitectónicos</h1>
+          <p className="text-muted-foreground tracking-luxury uppercase">Planificación 2014 - 2021</p>
         </motion.div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 md:px-12 py-16">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
         {/* Filtros */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-12 space-y-6"
+          className="mb-20 space-y-6"
         >
-          <div className="flex flex-col md:flex-row gap-6">
+          <div className="flex flex-col md:flex-row gap-8">
             {/* Filtro por año */}
             <div className="flex-1">
-              <label className="text-sm tracking-luxury uppercase text-muted-foreground mb-3 block">
+              <label className="text-sm tracking-luxury uppercase text-muted-foreground mb-4 block">
                 Filtrar por Año
               </label>
               <div className="flex flex-wrap gap-2">
@@ -240,7 +258,7 @@ const Projects = () => {
 
             {/* Filtro por categoría */}
             <div className="flex-1">
-              <label className="text-sm tracking-luxury uppercase text-muted-foreground mb-3 block">
+              <label className="text-sm tracking-luxury uppercase text-muted-foreground mb-4 block">
                 Filtrar por Tipo
               </label>
               <div className="flex flex-wrap gap-2">
@@ -283,8 +301,7 @@ const Projects = () => {
             </div>
           </div>
 
-          {/* Contador de resultados */}
-          <div className="text-sm text-muted-foreground tracking-luxury">
+          <div className="text-sm text-muted-foreground tracking-luxury pt-4 border-t border-border/50">
             Mostrando {filteredProjects.length} de {projectsTimeline.length} proyectos
           </div>
         </motion.div>
@@ -297,99 +314,104 @@ const Projects = () => {
         >
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-[29px] md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-muted" />
+            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2" />
 
-            <div className="space-y-12">
+            <div className="space-y-24">
               <AnimatePresence mode="popLayout">
                 {filteredProjects.map((project, index) => (
                   <motion.div
                     key={`${project.name}-${index}`}
                     layout
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.8 }}
-                    transition={{ duration: 0.4 }}
-                    className={`relative flex items-start gap-8 ${
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -30 }}
+                    transition={{ duration: 0.5 }}
+                    className={`relative flex items-center gap-8 md:gap-16 ${
                       index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                    } flex-row`}
+                    } flex-col md:items-center`}
                   >
-                    {/* Timeline dot */}
-                    <div className="absolute left-[22px] md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background shadow-lg z-10" />
+                    {/* Timeline dot central */}
+                    <div className="absolute left-8 md:left-1/2 md:-translate-x-1/2 w-3 h-3 rounded-full bg-primary ring-8 ring-background z-10 hidden md:block" />
 
-                    {/* Year badge */}
-                    <div className="hidden md:block absolute left-1/2 -translate-x-1/2 -top-2">
-                      <div className="bg-foreground text-background px-4 py-1 rounded-full text-xs font-medium tracking-luxury">
+                    {/* El Lado del Año (Opuesto a la tarjeta en desktop) */}
+                    <div className={`hidden md:flex w-1/2 ${index % 2 === 0 ? "justify-end text-right" : "justify-start text-left"}`}>
+                      <div className="font-heading text-7xl md:text-8xl lg:text-[10rem] font-bold text-muted/20 select-none">
                         {project.year}
                       </div>
                     </div>
 
-                    {/* Spacer for desktop alignment */}
-                    <div className="hidden md:block w-1/2" />
-
-                    {/* Content card */}
-                    <div className={`w-full md:w-1/2 ml-12 md:ml-0 ${
+                    {/* Tarjeta del Proyecto */}
+                    <div className={`w-full md:w-1/2 pl-20 md:pl-0 ${
                       index % 2 === 0 ? "md:pr-12" : "md:pl-12"
                     }`}>
+                      {/* Punto para móvil */}
+                      <div className="absolute left-8 -translate-x-[5.5px] top-6 w-3 h-3 rounded-full bg-primary ring-8 ring-background z-10 md:hidden" />
+
                       <button
                         onClick={() => setSelectedProject(project)}
-                        className={`w-full text-left group bg-card border ${getCategoryColor(project.category)} hover:border-foreground/30 transition-all duration-300 overflow-hidden cursor-pointer`}
+                        className={`w-full text-left group bg-card border border-border hover:border-primary/50 transition-all duration-500 overflow-hidden cursor-pointer rounded-xl shadow-sm hover:shadow-xl`}
                       >
+                        {/* Imagen de la tarjeta */}
+                        <div className="relative h-64 w-full overflow-hidden bg-muted">
+                           <img 
+                             src={project.image} 
+                             alt={project.name} 
+                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                           />
+                           {/* Overlay gradiente */}
+                           <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+                           
+                           {/* Año en móvil (dentro de la imagen) */}
+                           <div className="absolute top-4 right-4 md:hidden bg-background/90 backdrop-blur-sm px-4 py-1.5 rounded-full border border-border shadow-sm">
+                             <span className="font-heading font-bold text-primary">{project.year}</span>
+                           </div>
+
+                           <div className="absolute bottom-4 left-4 right-4">
+                             <Badge variant="outline" className={`mb-3 backdrop-blur-md bg-background/80 ${getCategoryColor(project.category)}`}>
+                               {getCategoryIcon(project.category)}
+                               <span className="ml-2">{getCategoryLabel(project.category)}</span>
+                             </Badge>
+                             <h3 className="font-heading text-2xl text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                               {project.name}
+                             </h3>
+                           </div>
+                        </div>
+
                         <div className="p-6">
-                          {/* Mobile year */}
-                          <div className="md:hidden mb-3 flex items-center gap-2">
-                            <div className="bg-foreground text-background px-3 py-1 rounded-full text-xs font-medium tracking-luxury">
-                              {project.year}
-                            </div>
-                          </div>
-
-                          {/* Category icon */}
-                          <div className="flex items-start justify-between mb-4">
-                            <div className={`p-2 rounded-lg ${getCategoryColor(project.category)}`}>
-                              {getCategoryIcon(project.category)}
-                            </div>
-                            <Maximize className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
-                          </div>
-
-                          {/* Project name */}
-                          <h3 className="font-heading text-xl md:text-2xl mb-2 text-foreground group-hover:text-primary transition-colors">
-                            {project.name}
-                          </h3>
-
-                          {/* Project type */}
-                          <p className="text-sm text-muted-foreground font-medium mb-4 tracking-luxury uppercase">
+                          <p className="text-sm text-muted-foreground font-medium mb-5 tracking-luxury uppercase">
                             {project.type}
                           </p>
 
-                          {/* Project details */}
-                          <div className="space-y-2 text-sm">
+                          {/* Project details grid */}
+                          <div className="grid grid-cols-2 gap-y-3 gap-x-4 text-sm">
+                            <div className="flex items-center gap-2 text-muted-foreground">
+                              <MapPin className="w-4 h-4 text-primary/70" />
+                              <span className="truncate">{project.location.split(',')[0]}</span>
+                            </div>
+                            <div className="flex items-center gap-2 text-muted-foreground">
+                              <Maximize className="w-4 h-4 text-primary/70" />
+                              <span>{project.area}</span>
+                            </div>
+                            <div className="flex items-center gap-2 text-muted-foreground">
+                              <Layers className="w-4 h-4 text-primary/70" />
+                              <span className="truncate">{project.floors}</span>
+                            </div>
                             {project.units && (
-                              <div className="flex items-center gap-2">
-                                <span className="text-muted-foreground">•</span>
-                                <span className="text-foreground">{project.units}</span>
+                              <div className="flex items-center gap-2 text-muted-foreground">
+                                <Home className="w-4 h-4 text-primary/70" />
+                                <span>{project.units}</span>
                               </div>
                             )}
-                            <div className="flex items-center gap-2">
-                              <span className="text-muted-foreground">•</span>
-                              <span className="text-foreground">{project.floors}</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                              <span className="text-muted-foreground">•</span>
-                              <span className="text-foreground font-medium">{project.area} área Bruta</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                              <TreePine className="w-4 h-4 text-muted-foreground" />
-                              <span className="text-muted-foreground">{project.location}</span>
-                            </div>
                           </div>
 
                           {/* Ver más indicador */}
-                          <div className="mt-4 text-xs text-primary tracking-luxury uppercase opacity-0 group-hover:opacity-100 transition-opacity">
-                            Click para ver más detalles →
+                          <div className="mt-6 flex items-center justify-between border-t border-border pt-4">
+                            <span className="text-xs text-muted-foreground tracking-luxury uppercase group-hover:text-primary transition-colors">
+                              Ver detalles completos
+                            </span>
+                            <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
                           </div>
                         </div>
-
-                        {/* Accent line */}
-                        <div className="h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       </button>
                     </div>
                   </motion.div>
@@ -397,29 +419,6 @@ const Projects = () => {
               </AnimatePresence>
             </div>
           </div>
-
-          {/* Summary stats */}
-          {filterYear === "all" && filterCategory === "all" && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6"
-            >
-              <div className="bg-accent/10 border border-accent/20 p-6 text-center">
-                <div className="text-4xl font-heading text-foreground mb-2">{projectsTimeline.filter(p => p.category === "residential").length}</div>
-                <div className="text-sm tracking-luxury uppercase text-muted-foreground">Proyectos Residenciales</div>
-              </div>
-              <div className="bg-primary/10 border border-primary/20 p-6 text-center">
-                <div className="text-4xl font-heading text-foreground mb-2">{projectsTimeline.filter(p => p.category === "commercial").length}</div>
-                <div className="text-sm tracking-luxury uppercase text-muted-foreground">Proyectos Comerciales</div>
-              </div>
-              <div className="bg-muted border border-border p-6 text-center">
-                <div className="text-4xl font-heading text-foreground mb-2">{projectsTimeline.filter(p => p.category === "mixed").length}</div>
-                <div className="text-sm tracking-luxury uppercase text-muted-foreground">Proyectos Mixtos</div>
-              </div>
-            </motion.div>
-          )}
         </motion.div>
       </div>
 
@@ -430,161 +429,127 @@ const Projects = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-background/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-background/90 backdrop-blur-sm z-50 flex items-center justify-center p-4 md:p-8"
             onClick={() => setSelectedProject(null)}
           >
             <motion.div
-              initial={{ scale: 0.9, y: 20 }}
-              animate={{ scale: 1, y: 0 }}
-              exit={{ scale: 0.9, y: 20 }}
-              transition={{ type: "spring", damping: 25 }}
-              className="bg-card border border-border rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
+              initial={{ scale: 0.95, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.95, opacity: 0, y: 20 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="bg-card border border-border rounded-xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-2xl flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Header */}
-              <div className="sticky top-0 bg-card border-b border-border p-6 flex items-start justify-between">
-                <div className="flex-1">
-                  <Badge className={`mb-3 ${getCategoryColor(selectedProject.category)}`}>
-                    {getCategoryIcon(selectedProject.category)}
-                    <span className="ml-2 tracking-luxury uppercase text-xs">
-                      {getCategoryLabel(selectedProject.category)}
-                    </span>
-                  </Badge>
-                  <h2 className="font-heading text-3xl text-foreground mb-2">
-                    {selectedProject.name}
-                  </h2>
-                  <p className="text-muted-foreground tracking-luxury uppercase text-sm">
-                    {selectedProject.type}
-                  </p>
-                </div>
-                <button
-                  onClick={() => setSelectedProject(null)}
-                  className="text-muted-foreground hover:text-foreground transition-colors ml-4"
-                >
-                  <X className="w-6 h-6" />
-                </button>
-              </div>
-
-              {/* Content */}
-              <div className="p-6 space-y-6">
-                {/* Detalles principales */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <Calendar className="w-5 h-5 text-primary mt-1" />
-                      <div>
-                        <div className="text-xs tracking-luxury uppercase text-muted-foreground mb-1">
-                          Año de Proyecto
-                        </div>
-                        <div className="text-foreground font-medium text-lg">
-                          {selectedProject.year}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <MapPin className="w-5 h-5 text-primary mt-1" />
-                      <div>
-                        <div className="text-xs tracking-luxury uppercase text-muted-foreground mb-1">
-                          Ubicación
-                        </div>
-                        <div className="text-foreground font-medium">
-                          {selectedProject.location}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <Layers className="w-5 h-5 text-primary mt-1" />
-                      <div>
-                        <div className="text-xs tracking-luxury uppercase text-muted-foreground mb-1">
-                          Pisos
-                        </div>
-                        <div className="text-foreground font-medium">
-                          {selectedProject.floors}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="space-y-4">
-                    {selectedProject.units && (
-                      <div className="flex items-start gap-3">
-                        <Home className="w-5 h-5 text-primary mt-1" />
-                        <div>
-                          <div className="text-xs tracking-luxury uppercase text-muted-foreground mb-1">
-                            Unidades
-                          </div>
-                          <div className="text-foreground font-medium">
-                            {selectedProject.units}
-                          </div>
-                        </div>
-                      </div>
-                    )}
-
-                    <div className="flex items-start gap-3">
-                      <Maximize className="w-5 h-5 text-primary mt-1" />
-                      <div>
-                        <div className="text-xs tracking-luxury uppercase text-muted-foreground mb-1">
-                          Área Bruta
-                        </div>
-                        <div className="text-foreground font-medium text-lg">
-                          {selectedProject.area}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              {/* Contenido scrolleable */}
+              <div className="overflow-y-auto flex-1">
+                {/* Header Image */}
+                <div className="relative h-64 md:h-80 w-full bg-muted">
+                  <img 
+                    src={selectedProject.image} 
+                    alt={selectedProject.name} 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
+                  
+                  {/* Botón cerrar flotante */}
+                  <button
+                    onClick={() => setSelectedProject(null)}
+                    className="absolute top-4 right-4 p-2 bg-background/50 hover:bg-background backdrop-blur-md rounded-full text-foreground transition-all"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
                 </div>
 
-                {/* Separador */}
-                <div className="border-t border-border" />
-
-                {/* Descripción del proyecto */}
-                <div>
-                  <h3 className="text-sm tracking-luxury uppercase text-muted-foreground mb-3">
-                    Descripción del Proyecto
-                  </h3>
-                  <p className="text-foreground leading-relaxed">
-                    Proyecto de planificación arquitectónica {selectedProject.type.toLowerCase()} ubicado en {selectedProject.location}. 
-                    {selectedProject.units && ` Contempla el desarrollo de ${selectedProject.units.toLowerCase()}`} 
-                    {" "}distribuidas en {selectedProject.floors.toLowerCase()}, con un área bruta total de {selectedProject.area}.
-                  </p>
-                </div>
-
-                {/* Características destacadas */}
-                <div>
-                  <h3 className="text-sm tracking-luxury uppercase text-muted-foreground mb-3">
-                    Características Destacadas
-                  </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    <div className="bg-muted/50 p-4 rounded-lg">
-                      <div className="text-xs tracking-luxury uppercase text-muted-foreground mb-1">
-                        Tipo de Desarrollo
-                      </div>
-                      <div className="text-foreground font-medium">
+                <div className="px-6 md:px-10 pb-10">
+                  {/* Título (superpuesto a la imagen) */}
+                  <div className="-mt-16 relative z-10 mb-8">
+                    <Badge className={`mb-4 shadow-md ${getCategoryColor(selectedProject.category)}`}>
+                      {getCategoryIcon(selectedProject.category)}
+                      <span className="ml-2 tracking-luxury uppercase text-xs">
                         {getCategoryLabel(selectedProject.category)}
+                      </span>
+                    </Badge>
+                    <h2 className="font-heading text-3xl md:text-5xl text-foreground mb-3 leading-tight">
+                      {selectedProject.name}
+                    </h2>
+                    <p className="text-muted-foreground tracking-luxury uppercase text-sm md:text-base font-medium">
+                      {selectedProject.type}
+                    </p>
+                  </div>
+
+                  {/* Detalles principales */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10 bg-muted/30 p-6 rounded-xl border border-border">
+                    <div className="space-y-1">
+                      <div className="text-xs tracking-luxury uppercase text-muted-foreground flex items-center gap-1.5 mb-2">
+                        <Calendar className="w-3.5 h-3.5" /> Año
+                      </div>
+                      <div className="text-foreground font-semibold text-lg">{selectedProject.year}</div>
+                    </div>
+                    <div className="space-y-1">
+                      <div className="text-xs tracking-luxury uppercase text-muted-foreground flex items-center gap-1.5 mb-2">
+                        <MapPin className="w-3.5 h-3.5" /> Ubicación
+                      </div>
+                      <div className="text-foreground font-semibold">{selectedProject.location}</div>
+                    </div>
+                    <div className="space-y-1">
+                      <div className="text-xs tracking-luxury uppercase text-muted-foreground flex items-center gap-1.5 mb-2">
+                        <Maximize className="w-3.5 h-3.5" /> Área
+                      </div>
+                      <div className="text-foreground font-semibold text-lg">{selectedProject.area}</div>
+                    </div>
+                    <div className="space-y-1">
+                      <div className="text-xs tracking-luxury uppercase text-muted-foreground flex items-center gap-1.5 mb-2">
+                        <Layers className="w-3.5 h-3.5" /> Pisos
+                      </div>
+                      <div className="text-foreground font-semibold">{selectedProject.floors}</div>
+                    </div>
+                  </div>
+
+                  {/* Descripción del proyecto */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="md:col-span-2">
+                      <h3 className="text-sm tracking-luxury uppercase text-muted-foreground mb-4">
+                        Descripción del Proyecto
+                      </h3>
+                      <div className="text-foreground leading-relaxed space-y-4">
+                        <p>
+                          Espectacular proyecto de planificación arquitectónica de tipo <strong>{selectedProject.type.toLowerCase()}</strong> ubicado estratégicamente en <strong>{selectedProject.location}</strong>.
+                        </p>
+                        <p>
+                          El desarrollo {selectedProject.units ? `contempla la creación de ${selectedProject.units.toLowerCase()}` : `está diseñado`} en una estructura de <strong>{selectedProject.floors.toLowerCase()}</strong>, alcanzando un área bruta total de <strong>{selectedProject.area}</strong>.
+                        </p>
+                        <p className="text-muted-foreground">
+                          Cada detalle ha sido cuidadosamente planificado para maximizar la funcionalidad del espacio y la integración con el entorno, marcando un hito en el portafolio arquitectónico del año {selectedProject.year}.
+                        </p>
                       </div>
                     </div>
-                    <div className="bg-muted/50 p-4 rounded-lg">
-                      <div className="text-xs tracking-luxury uppercase text-muted-foreground mb-1">
-                        Clasificación
-                      </div>
-                      <div className="text-foreground font-medium">
-                        {selectedProject.type}
+
+                    <div>
+                      <h3 className="text-sm tracking-luxury uppercase text-muted-foreground mb-4">
+                        Especificaciones
+                      </h3>
+                      <div className="space-y-4">
+                        <div className="bg-background border border-border p-4 rounded-lg shadow-sm">
+                          <div className="text-xs text-muted-foreground mb-1">Categoría</div>
+                          <div className="text-foreground font-medium capitalize">{getCategoryLabel(selectedProject.category)}</div>
+                        </div>
+                        {selectedProject.units && (
+                          <div className="bg-background border border-border p-4 rounded-lg shadow-sm">
+                            <div className="text-xs text-muted-foreground mb-1">Capacidad</div>
+                            <div className="text-foreground font-medium">{selectedProject.units}</div>
+                          </div>
+                        )}
+                        <Button 
+                          onClick={() => setSelectedProject(null)}
+                          className="w-full mt-4 tracking-luxury"
+                          variant="outline"
+                        >
+                          Cerrar Detalles
+                        </Button>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Footer */}
-              <div className="sticky bottom-0 bg-card border-t border-border p-6">
-                <Button
-                  onClick={() => setSelectedProject(null)}
-                  className="w-full tracking-luxury"
-                >
-                  Cerrar
-                </Button>
               </div>
             </motion.div>
           </motion.div>
@@ -595,3 +560,6 @@ const Projects = () => {
 };
 
 export default Projects;
+]]>
+
+[Tool result trimmed: kept first 100 chars and last 100 chars of 15206 chars.]

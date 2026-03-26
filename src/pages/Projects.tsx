@@ -332,8 +332,7 @@ const Projects = () => {
 
                     {/* El Lado del Año */}
                     <div className={`hidden md:flex w-1/2 ${index % 2 === 0 ? "justify-end text-right" : "justify-start text-left"}`}>
-                      {/* Año con opacidad ajustada para buena visibilidad sin perder elegancia */}
-                      <div className="font-heading text-7xl md:text-8xl lg:text-[10rem] font-bold text-foreground/20 select-none drop-shadow-sm">
+                      <div className="font-heading text-7xl md:text-8xl lg:text-[10rem] font-bold text-foreground/30 select-none drop-shadow-sm">
                         {project.year}
                       </div>
                     </div>
@@ -367,7 +366,7 @@ const Projects = () => {
                            {/* Overlay gradiente */}
                            <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
                            
-                           {/* Año en móvil (dentro de la imagen) para que no se superponga */}
+                           {/* Año en móvil (dentro de la imagen) */}
                            <div className="absolute top-4 right-4 md:hidden bg-background/90 backdrop-blur-sm px-4 py-1.5 rounded-full border border-border shadow-sm z-20">
                              <span className="font-heading font-bold text-primary">{project.year}</span>
                            </div>

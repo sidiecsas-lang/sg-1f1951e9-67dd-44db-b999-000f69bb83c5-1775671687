@@ -1,7 +1,6 @@
-<![CDATA[
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Building2, Home, Hotel, TreePine, X, Calendar, MapPin, Layers, Maximize, ExternalLink } from "lucide-react";
+import { ArrowLeft, Building2, Home, Hotel, X, Calendar, MapPin, Layers, Maximize, ExternalLink } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -21,7 +20,7 @@ interface ProjectDetail {
 const projectsTimeline: ProjectDetail[] = [
   {
     year: "2014",
-    name: 'Conjunto Habitacional "Los Quindes"',
+    name: 'Conjunto Habitacional "Las Retamas"',
     type: "Conjunto Habitacional",
     units: "70 viviendas",
     floors: "2 pisos",
@@ -32,7 +31,7 @@ const projectsTimeline: ProjectDetail[] = [
   },
   {
     year: "2015",
-    name: 'Residencia "Myriam Cando Peña"',
+    name: 'Residencia "Del Encanto"',
     type: "Residencia Unifamiliar",
     floors: "2 pisos",
     area: "115 m²",
@@ -42,7 +41,7 @@ const projectsTimeline: ProjectDetail[] = [
   },
   {
     year: "2016",
-    name: 'Residencia "Chablay Trujillo"',
+    name: 'Residencia "Santa Clara"',
     type: "Residencia Multifamiliar",
     units: "3 unidades",
     floors: "3 pisos",
@@ -53,7 +52,7 @@ const projectsTimeline: ProjectDetail[] = [
   },
   {
     year: "2017",
-    name: 'Edificio "San Gregorio Plaza"',
+    name: 'Edificio "Manto Verde"',
     type: "Edificio Residencial",
     units: "47 unidades",
     floors: "8 pisos y 3 subsuelos",
@@ -64,7 +63,7 @@ const projectsTimeline: ProjectDetail[] = [
   },
   {
     year: "2018",
-    name: 'Modificatorio "Orquídeas de San Rafael"',
+    name: 'Proyecto "Villa Lago"',
     type: "Conjunto Habitacional",
     units: "156 viviendas",
     floors: "2 pisos",
@@ -75,7 +74,7 @@ const projectsTimeline: ProjectDetail[] = [
   },
   {
     year: "2019",
-    name: '"Residenciales Montresor"',
+    name: 'Residencia "Un Solo Andar"',
     type: "Conjunto Habitacional",
     units: "8 residencias",
     floors: "2 pisos",
@@ -86,7 +85,7 @@ const projectsTimeline: ProjectDetail[] = [
   },
   {
     year: "2019",
-    name: '"Terrazas de Sión"',
+    name: 'Residencia "Dorada"',
     type: "Conjunto Habitacional",
     units: "21 unidades",
     floors: "4 pisos y 1 subsuelo",
@@ -97,7 +96,7 @@ const projectsTimeline: ProjectDetail[] = [
   },
   {
     year: "2019",
-    name: '"Terrazas de Conocoto"',
+    name: 'Residencia "De Un Músico"',
     type: "Conjunto Habitacional",
     units: "6 unidades",
     floors: "4 pisos",
@@ -108,7 +107,7 @@ const projectsTimeline: ProjectDetail[] = [
   },
   {
     year: "2020",
-    name: '"La Isla" Lodge',
+    name: '"La Casa Del Prioste"',
     type: "Complejo Hotel Lodge",
     floors: "1 y 2 pisos",
     area: "862 m²",
@@ -118,7 +117,7 @@ const projectsTimeline: ProjectDetail[] = [
   },
   {
     year: "2020",
-    name: '"Aquaponic INGSA"',
+    name: 'Residencia "Tragaluz"',
     type: "Complejo y Residencial",
     floors: "1 y 2 pisos",
     area: "274 m²",
@@ -128,7 +127,7 @@ const projectsTimeline: ProjectDetail[] = [
   },
   {
     year: "2021",
-    name: 'Residencia "Tatiana León"',
+    name: '"Guayllabamba Gardens"',
     type: "Residencia Multifamiliar",
     units: "2 unidades",
     floors: "3 pisos",
@@ -139,7 +138,7 @@ const projectsTimeline: ProjectDetail[] = [
   },
   {
     year: "2021",
-    name: '"Nativa Crops" Oficinas',
+    name: '"Marino Valley"',
     type: "Oficinas y Residencial",
     units: "5 unidades",
     floors: "4 pisos",
@@ -197,7 +196,7 @@ const Projects = () => {
   return (
     <div className="min-h-screen bg-background">
       <div className="relative h-[40vh] bg-gradient-to-b from-muted/30 to-background flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-10">
+        <div className="absolute inset-0 z-0 opacity-20">
            <img src="/LasRetamas.jpg" alt="Background" className="w-full h-full object-cover" />
            <div className="absolute inset-0 bg-background/80" />
         </div>
@@ -335,7 +334,7 @@ const Projects = () => {
 
                     {/* El Lado del Año (Opuesto a la tarjeta en desktop) */}
                     <div className={`hidden md:flex w-1/2 ${index % 2 === 0 ? "justify-end text-right" : "justify-start text-left"}`}>
-                      <div className="font-heading text-7xl md:text-8xl lg:text-[10rem] font-bold text-muted/20 select-none">
+                      <div className="font-heading text-7xl md:text-8xl lg:text-[10rem] font-bold text-muted/10 select-none">
                         {project.year}
                       </div>
                     </div>
@@ -345,7 +344,7 @@ const Projects = () => {
                       index % 2 === 0 ? "md:pr-12" : "md:pl-12"
                     }`}>
                       {/* Punto para móvil */}
-                      <div className="absolute left-8 -translate-x-[5.5px] top-6 w-3 h-3 rounded-full bg-primary ring-8 ring-background z-10 md:hidden" />
+                      <div className="absolute left-8 -translate-x-[5.5px] top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary ring-8 ring-background z-10 md:hidden" />
 
                       <button
                         onClick={() => setSelectedProject(project)}
@@ -361,12 +360,12 @@ const Projects = () => {
                            {/* Overlay gradiente */}
                            <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
                            
-                           {/* Año en móvil (dentro de la imagen) */}
-                           <div className="absolute top-4 right-4 md:hidden bg-background/90 backdrop-blur-sm px-4 py-1.5 rounded-full border border-border shadow-sm">
+                           {/* Año en móvil (dentro de la imagen) para que no se superponga */}
+                           <div className="absolute top-4 right-4 md:hidden bg-background/90 backdrop-blur-sm px-4 py-1.5 rounded-full border border-border shadow-sm z-20">
                              <span className="font-heading font-bold text-primary">{project.year}</span>
                            </div>
 
-                           <div className="absolute bottom-4 left-4 right-4">
+                           <div className="absolute bottom-4 left-4 right-4 z-20">
                              <Badge variant="outline" className={`mb-3 backdrop-blur-md bg-background/80 ${getCategoryColor(project.category)}`}>
                                {getCategoryIcon(project.category)}
                                <span className="ml-2">{getCategoryLabel(project.category)}</span>
@@ -454,7 +453,7 @@ const Projects = () => {
                   {/* Botón cerrar flotante */}
                   <button
                     onClick={() => setSelectedProject(null)}
-                    className="absolute top-4 right-4 p-2 bg-background/50 hover:bg-background backdrop-blur-md rounded-full text-foreground transition-all"
+                    className="absolute top-4 right-4 p-2 bg-background/50 hover:bg-background backdrop-blur-md rounded-full text-foreground transition-all z-20"
                   >
                     <X className="w-5 h-5" />
                   </button>
@@ -560,6 +559,3 @@ const Projects = () => {
 };
 
 export default Projects;
-]]>
-
-[Tool result trimmed: kept first 100 chars and last 100 chars of 15206 chars.]

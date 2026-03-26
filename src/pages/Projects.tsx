@@ -14,138 +14,127 @@ interface ProjectDetail {
   area: string;
   location: string;
   category: "residential" | "commercial" | "mixed";
-  image: string;
+  image?: string;
 }
 
 const projectsTimeline: ProjectDetail[] = [
   {
     year: "2014",
-    name: 'Conjunto Habitacional "Las Retamas"',
+    name: 'Conjunto Habitacional "Los Quindes"',
     type: "Conjunto Habitacional",
     units: "70 viviendas",
     floors: "2 pisos",
     area: "8.968 m²",
     location: "Ambato, Ecuador",
     category: "residential",
-    image: "/LasRetamas.jpg"
+    image: "/LasRetamas.jpg" // Imagen de ejemplo dejada a propósito
   },
   {
     year: "2015",
-    name: 'Residencia "Del Encanto"',
+    name: 'Residencia "Myriam Cando Peña"',
     type: "Residencia Unifamiliar",
     floors: "2 pisos",
     area: "115 m²",
     location: "Quito, Ecuador",
-    category: "residential",
-    image: "/ReresidenciaDelEncanto.jpg"
+    category: "residential"
   },
   {
     year: "2016",
-    name: 'Residencia "Santa Clara"',
+    name: 'Residencia "Familia Naranjo"',
     type: "Residencia Multifamiliar",
     units: "3 unidades",
     floors: "3 pisos",
     area: "177 m²",
     location: "Quito, Ecuador",
-    category: "residential",
-    image: "/ResidenciaSantaClara.png"
+    category: "residential"
   },
   {
     year: "2017",
-    name: 'Edificio "Manto Verde"',
+    name: 'Edificio "Torre Nova"',
     type: "Edificio Residencial",
     units: "47 unidades",
     floors: "8 pisos y 3 subsuelos",
     area: "8.570 m²",
     location: "Quito, Ecuador",
-    category: "residential",
-    image: "/ResidenciaMantoVerde.jpg"
+    category: "residential"
   },
   {
     year: "2018",
-    name: 'Proyecto "Villa Lago"',
+    name: 'Proyecto "Aires del Batan"',
     type: "Conjunto Habitacional",
     units: "156 viviendas",
     floors: "2 pisos",
     area: "27.115 m²",
     location: "Quito, Ecuador",
-    category: "residential",
-    image: "/VillaLago.jpg"
+    category: "residential"
   },
   {
     year: "2019",
-    name: 'Residencia "Un Solo Andar"',
+    name: 'Residencia "Los Cipreses"',
     type: "Conjunto Habitacional",
     units: "8 residencias",
     floors: "2 pisos",
     area: "877 m²",
     location: "Quito, Ecuador",
-    category: "residential",
-    image: "/ResidenciaUnSoloAndar.jpg"
+    category: "residential"
   },
   {
     year: "2019",
-    name: 'Residencia "Dorada"',
+    name: 'Residencia "El Mirador"',
     type: "Conjunto Habitacional",
     units: "21 unidades",
     floors: "4 pisos y 1 subsuelo",
     area: "3.511 m²",
     location: "Quito, Ecuador",
-    category: "residential",
-    image: "/ResidenciaDorada.png"
+    category: "residential"
   },
   {
     year: "2019",
-    name: 'Residencia "De Un Músico"',
+    name: 'Residencia "Altos del Valle"',
     type: "Conjunto Habitacional",
     units: "6 unidades",
     floors: "4 pisos",
     area: "792 m²",
     location: "Quito, Ecuador",
-    category: "residential",
-    image: "/ResidenciaDeUnMusico.png"
+    category: "residential"
   },
   {
     year: "2020",
-    name: '"La Casa Del Prioste"',
+    name: '"Hacienda San José"',
     type: "Complejo Hotel Lodge",
     floors: "1 y 2 pisos",
     area: "862 m²",
     location: "Cotacachi, Ecuador",
-    category: "commercial",
-    image: "/LaCasaDelPrioste.jpg"
+    category: "commercial"
   },
   {
     year: "2020",
-    name: 'Residencia "Tragaluz"',
+    name: 'Residencia "La Cañada"',
     type: "Complejo y Residencial",
     floors: "1 y 2 pisos",
     area: "274 m²",
     location: "Guayllabamba, Ecuador",
-    category: "mixed",
-    image: "/ResidenciaTragaluz.png"
+    category: "mixed"
   },
   {
     year: "2021",
-    name: '"Guayllabamba Gardens"',
+    name: '"Vista Hermosa"',
     type: "Residencia Multifamiliar",
     units: "2 unidades",
     floors: "3 pisos",
     area: "177 m²",
     location: "Quito, Ecuador",
-    category: "residential",
-    image: "/GuayllabambaGardens.png"
+    category: "residential"
   },
   {
     year: "2021",
-    name: '"Marino Valley"',
+    name: '"Plaza Central"',
     type: "Oficinas y Residencial",
     units: "5 unidades",
     floors: "4 pisos",
     area: "635 m²",
     location: "Quito, Ecuador",
-    category: "mixed",
-    image: "/MarinoValley.jpg"
+    category: "mixed"
   }
 ];
 
@@ -334,7 +323,8 @@ const Projects = () => {
 
                     {/* El Lado del Año (Opuesto a la tarjeta en desktop) */}
                     <div className={`hidden md:flex w-1/2 ${index % 2 === 0 ? "justify-end text-right" : "justify-start text-left"}`}>
-                      <div className="font-heading text-7xl md:text-8xl lg:text-[10rem] font-bold text-muted/10 select-none">
+                      {/* Aquí el año ahora tiene un color más claro (text-foreground/15) para no perderse en el fondo oscuro */}
+                      <div className="font-heading text-7xl md:text-8xl lg:text-[10rem] font-bold text-foreground/15 select-none drop-shadow-sm">
                         {project.year}
                       </div>
                     </div>
@@ -350,13 +340,21 @@ const Projects = () => {
                         onClick={() => setSelectedProject(project)}
                         className={`w-full text-left group bg-card border border-border hover:border-primary/50 transition-all duration-500 overflow-hidden cursor-pointer rounded-xl shadow-sm hover:shadow-xl`}
                       >
-                        {/* Imagen de la tarjeta */}
-                        <div className="relative h-64 w-full overflow-hidden bg-muted">
-                           <img 
-                             src={project.image} 
-                             alt={project.name} 
-                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                           />
+                        {/* Imagen de la tarjeta o Placeholder */}
+                        <div className="relative h-64 w-full overflow-hidden bg-muted flex items-center justify-center">
+                           {project.image ? (
+                             <img 
+                               src={project.image} 
+                               alt={project.name} 
+                               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                             />
+                           ) : (
+                             <div className="w-full h-full bg-muted/50 flex flex-col items-center justify-center text-muted-foreground/30 transition-transform duration-700 group-hover:scale-105">
+                                <Building2 className="w-20 h-20 mb-4 opacity-50" />
+                                <span className="text-xs tracking-luxury uppercase">Próximamente</span>
+                             </div>
+                           )}
+
                            {/* Overlay gradiente */}
                            <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
                            
@@ -441,13 +439,19 @@ const Projects = () => {
             >
               {/* Contenido scrolleable */}
               <div className="overflow-y-auto flex-1">
-                {/* Header Image */}
-                <div className="relative h-64 md:h-80 w-full bg-muted">
-                  <img 
-                    src={selectedProject.image} 
-                    alt={selectedProject.name} 
-                    className="w-full h-full object-cover"
-                  />
+                {/* Header Image o Placeholder */}
+                <div className="relative h-64 md:h-80 w-full bg-muted flex items-center justify-center">
+                  {selectedProject.image ? (
+                    <img 
+                      src={selectedProject.image} 
+                      alt={selectedProject.name} 
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-muted/50 flex flex-col items-center justify-center text-muted-foreground/30">
+                      <Building2 className="w-32 h-32 mb-4 opacity-30" />
+                    </div>
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
                   
                   {/* Botón cerrar flotante */}

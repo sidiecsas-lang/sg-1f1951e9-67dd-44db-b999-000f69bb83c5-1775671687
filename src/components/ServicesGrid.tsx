@@ -1,17 +1,12 @@
 import { motion } from "framer-motion";
-import serviceDesign from "@/assets/service-design.jpg";
-import serviceConstruction from "@/assets/service-construction.jpg";
-import serviceInterior from "@/assets/service-interior.jpg";
-import serviceLandscape from "@/assets/service-landscape.jpg";
-import serviceRemodel from "@/assets/service-remodel.jpg";
 import serviceConsulting from "@/assets/service-consulting.jpg";
 
 const services = [
-  { name: "Diseño Arquitectónico", image: serviceDesign },
-  { name: "Construcción", image: serviceConstruction },
-  { name: "Interiorismo", image: serviceInterior },
-  { name: "Paisajismo", image: serviceLandscape },
-  { name: "Remodelación", image: serviceRemodel },
+  { name: "Diseño Arquitectónico", image: "/Disenio-Arquitectonico.jpg" },
+  { name: "Construcción", image: "/Construccio_n.jpg" },
+  { name: "Interiorismo", image: "/Interiorismo.png" },
+  { name: "Paisajismo", image: "/Paisajismo.jpg" },
+  { name: "Remodelación", image: "/Remodelacion.jpg" },
   { name: "Consultoría", image: serviceConsulting },
 ];
 

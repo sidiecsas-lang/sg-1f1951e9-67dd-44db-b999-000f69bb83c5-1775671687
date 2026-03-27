@@ -17,7 +17,7 @@ const SpacesSection = () => {
       <div className="px-6 md:px-12 mb-12 text-center">
         <p className="text-xs tracking-wide-luxury uppercase text-primary mb-4">Espacios & Lugares</p>
         <h3 className="text-lg md:text-xl text-secondary-foreground font-light max-w-2xl mx-auto leading-relaxed">
-          El estilo de vida único de Cristina Granda se inspira en la rica mezcla de culturas y los lugares más magníficos del mundo. ¡Déjate inspirar!
+          Más que diseñar estructuras, Cristina Granda interpreta el mundo para proyectar escenarios de vida. Inspirada en la excelencia del diseño global, cada espacio es una pieza única, trazada a la medida de quienes lo habitan.
         </h3>
       </div>
 

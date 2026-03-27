@@ -515,8 +515,8 @@ const Projects = () => {
                           rel="noopener noreferrer"
                           className="inline-block"
                         >
-                          <Button className="bg-[#FF0000] hover:bg-[#CC0000] text-white flex items-center gap-2 tracking-luxury">
-                            <Youtube className="w-5 h-5" />
+                          <Button variant="outline" className="group border-border hover:border-primary/50 hover:bg-primary/5 text-foreground flex items-center gap-2 tracking-luxury transition-all duration-300">
+                            <Youtube className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                             Ver Video en YouTube
                           </Button>
                         </a>

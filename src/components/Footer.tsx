@@ -1,3 +1,6 @@
+import { Instagram, Youtube } from "lucide-react";
+import { FaTiktok } from "react-icons/fa";
+
 const Footer = () => {
   return (
     <footer className="bg-secondary border-t border-border/50 py-16">
@@ -36,9 +39,33 @@ const Footer = () => {
         <div className="border-t border-border/50 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <span className="text-xs text-muted-foreground">© 2026 Cristina Granda. Todos los derechos reservados.</span>
           <div className="flex gap-6">
-            <span className="text-xs text-muted-foreground hover:text-foreground cursor-pointer transition-colors">Instagram</span>
-            <span className="text-xs text-muted-foreground hover:text-foreground cursor-pointer transition-colors">LinkedIn</span>
-            <span className="text-xs text-muted-foreground hover:text-foreground cursor-pointer transition-colors">Pinterest</span>
+            <a 
+              href="https://www.instagram.com/cristina.granda.t/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="Instagram"
+            >
+              <Instagram className="w-5 h-5" />
+            </a>
+            <a 
+              href="https://www.tiktok.com/@cristina.granda.t" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="TikTok"
+            >
+              <FaTiktok className="w-5 h-5" />
+            </a>
+            <a 
+              href="https://www.youtube.com/@cristina.granda.t" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="YouTube"
+            >
+              <Youtube className="w-5 h-5" />
+            </a>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Building2, Home, Hotel, X, Calendar, MapPin, Layers, Maximize, ExternalLink } from "lucide-react";
+import { ArrowLeft, Building2, Home, Hotel, X, Calendar, MapPin, Layers, Maximize, ExternalLink, Youtube } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -15,137 +15,119 @@ interface ProjectDetail {
   location: string;
   category: "residential" | "commercial" | "mixed";
   image?: string;
+  description: string;
+  youtubeUrl: string;
 }
 
 const projectsTimeline: ProjectDetail[] = [
   {
-    year: "2014",
-    name: 'Conjunto Habitacional "Los Quindes"',
-    type: "Conjunto Habitacional",
-    units: "70 viviendas",
+    year: "2022",
+    name: 'Residencia Santa Clara',
+    type: "Residencia",
     floors: "2 pisos",
-    area: "8.968 m²",
-    location: "Ambato, Ecuador",
+    area: "206 m²",
+    location: "Sangolquí, Ecuador",
     category: "residential",
-    image: "/LasRetamas.jpg"
+    image: "/ResidenciaSantaClara.png",
+    description: 'En un terreno de 12.5 x 20 metros se desarrolla esta residencia en Santa Clara, un proyecto marcado por formas Victorianas para el diseño exterior, al tiempo que emana líneas minimalitas en el interior que incluyen espacios a doble altura envolventes. Esta urbanización que nos marcó las directrices de diseño, también nos dió hermosas visuales. El programa arquitectónico incluye áreas exteriores como el BBQ y parqueadero cubierto. Resultando un diseño armonioso con el entorno urbano y funcional con los requerimientos espaciales del propietario.',
+    youtubeUrl: 'https://www.youtube.com/watch?v=ogOUThVsoNM&t=14s'
   },
   {
-    year: "2015",
-    name: 'Residencia "Myriam Cando Peña"',
-    type: "Residencia Unifamiliar",
+    year: "2022",
+    name: 'La Casa del Prioste',
+    type: "Residencia",
     floors: "2 pisos",
-    area: "115 m²",
-    location: "Quito, Ecuador",
+    area: "456 m²",
+    location: "Atahuallpa, Ecuador",
     category: "residential",
-    image: "/ReresidenciaDelEncanto.jpg"
+    image: "/LaCasaDelPrioste.jpg",
+    description: 'En el maravilloso pueblo de Atahuallpa nos encontramos con un terreno de 1000 m2 en forma de "T" invertida, siendo la parte frontal más estrecha que la posterior, con un frente de 12 metros y un posterior de 38 metros. Siendo así, decidimos implantar la vivienda justo en la mitad del terreno, darle vocación a cada uno de los patios resultantes y unir los dos bloques de esta residencia con un puente elevado que lleva al dormitorio máster, para así también garantizar el acceso vehicular hacia el patio posterior y darle total privacidad al dormitorio principal.',
+    youtubeUrl: 'https://www.youtube.com/watch?v=LNJspDfO4qA'
   },
   {
-    year: "2016",
-    name: 'Residencia "Familia Naranjo"',
-    type: "Residencia Multifamiliar",
-    units: "3 unidades",
-    floors: "3 pisos",
-    area: "177 m²",
-    location: "Quito, Ecuador",
-    category: "residential",
-    image: "/ResidenciaSantaClara.png"
-  },
-  {
-    year: "2017",
-    name: 'Edificio "Torre Nova"',
-    type: "Edificio Residencial",
-    units: "47 unidades",
-    floors: "8 pisos y 3 subsuelos",
-    area: "8.570 m²",
-    location: "Quito, Ecuador",
-    category: "residential",
-    image: "/ResidenciaMantoVerde.jpg"
-  },
-  {
-    year: "2018",
-    name: 'Proyecto "Aires del Batan"',
-    type: "Conjunto Habitacional",
-    units: "156 viviendas",
+    year: "2022",
+    name: 'Residencia Tragaluz',
+    type: "Residencia",
     floors: "2 pisos",
-    area: "27.115 m²",
-    location: "Quito, Ecuador",
+    area: "276 m²",
+    location: "Alangasí, Ecuador",
     category: "residential",
-    image: "/VillaLago.jpg"
+    image: "/ResidenciaTragaluz.png",
+    description: 'Amamos los terreno a desnivel, estos permiten generar volúmenes y funciones nuevas en lugares inesperados, como es el caso de los parqueaderos en subsuelos para esta residencia minimalista de 276m2 implantada en un terreno de 600m2.',
+    youtubeUrl: 'https://www.youtube.com/watch?v=PKK7rYcnSsU'
   },
   {
-    year: "2019",
-    name: 'Residencia "Los Cipreses"',
-    type: "Conjunto Habitacional",
-    units: "8 residencias",
+    year: "2023",
+    name: 'Residencia Flia Sierra (Un solo Andar)',
+    type: "Residencia",
     floors: "2 pisos",
-    area: "877 m²",
-    location: "Quito, Ecuador",
+    area: "160 m²",
+    location: "Alangasí, Ecuador",
     category: "residential",
-    image: "/ResidenciaUnSoloAndar.jpg"
+    image: "/ResidenciaUnSoloAndar.jpg",
+    description: 'La pureza de materiales predomina en esta composición de concepto minimallista cálido. Es una residencia de una sola planta con subsuelo, son 160 m2 en un terreno de 830 m2.',
+    youtubeUrl: 'https://www.youtube.com/watch?v=XZBCjgB_DQE'
   },
   {
-    year: "2019",
-    name: 'Residencia "El Mirador"',
-    type: "Conjunto Habitacional",
-    units: "21 unidades",
-    floors: "4 pisos y 1 subsuelo",
-    area: "3.511 m²",
-    location: "Quito, Ecuador",
-    category: "residential",
-    image: "/ResidenciaDorada.png"
-  },
-  {
-    year: "2019",
-    name: 'Residencia "Altos del Valle"',
-    type: "Conjunto Habitacional",
-    units: "6 unidades",
-    floors: "4 pisos",
-    area: "792 m²",
-    location: "Quito, Ecuador",
-    category: "residential",
-    image: "/ResidenciaDeUnMusico.png"
-  },
-  {
-    year: "2020",
-    name: '"Hacienda San José"',
-    type: "Complejo Hotel Lodge",
-    floors: "1 y 2 pisos",
-    area: "862 m²",
-    location: "Cotacachi, Ecuador",
-    category: "commercial",
-    image: "/LaCasaDelPrioste.jpg"
-  },
-  {
-    year: "2020",
-    name: 'Residencia "La Cañada"',
-    type: "Complejo y Residencial",
-    floors: "1 y 2 pisos",
-    area: "274 m²",
+    year: "2023",
+    name: 'Residencia Dorada',
+    type: "Residencia",
+    floors: "2 pisos",
+    area: "340 m²",
     location: "Guayllabamba, Ecuador",
-    category: "mixed",
-    image: "/ResidenciaTragaluz.png"
-  },
-  {
-    year: "2021",
-    name: '"Vista Hermosa"',
-    type: "Residencia Multifamiliar",
-    units: "2 unidades",
-    floors: "3 pisos",
-    area: "177 m²",
-    location: "Quito, Ecuador",
     category: "residential",
-    image: "/GuayllabambaGardens.png"
+    image: "/ResidenciaDorada.png",
+    description: 'Una Residencia de 340m2 diseñada para una hermosa pareja que se encuentra en sus años dorados, el maravilloso dormitorio master en planta baja contiene todos los servicio y accesos necesarios para dar mayor flexibilidad de uso y facilidad de ingreso a sus ocupantes, mientras que en planta alta se destinan espacios para visitas con terraza abierta junto a un estudio con vista panorámica de ensueño. Es un terreno de 484m2 con curvatura en el frente, esta forma particular nos genera una implantación inigualable con perspectivas únicas y singulares desde cada uno de los ambientes.',
+    youtubeUrl: 'https://www.youtube.com/watch?v=ehLMdjWXbaw&t=67s'
   },
   {
-    year: "2021",
-    name: '"Plaza Central"',
-    type: "Oficinas y Residencial",
-    units: "5 unidades",
-    floors: "4 pisos",
-    area: "635 m²",
-    location: "Quito, Ecuador",
-    category: "mixed",
-    image: "/MarinoValley.jpg"
+    year: "2024",
+    name: 'Guayllabamba Gardens',
+    type: "Conjunto Habitacional",
+    units: "39 viviendas",
+    floors: "2 pisos",
+    area: "5.289 m²",
+    location: "Guayllabamba, Ecuador",
+    category: "residential",
+    image: "/GuayllabambaGardens.png",
+    description: '“Guayllabamba Gardens” se ubica en la parroquia de Guayllabamba del Distrito Metropolitano de Quito. El Conjunto cuenta con 39 viviendas en un terreno de 22572 m2. Se proyectan viviendas de 2 pisos aisladas de varias tipologías y metrajes. Siendo predominante el producto VIP, viviendas en 94 m2.',
+    youtubeUrl: 'https://www.youtube.com/watch?v=cAF7_r8ur3M'
+  },
+  {
+    year: "2024",
+    name: 'Mirano Valley',
+    type: "Conjunto Habitacional",
+    floors: "3 pisos",
+    area: "510 m²",
+    location: "Conocoto, Ecuador",
+    category: "residential",
+    image: "/MarinoValley.jpg",
+    description: 'En un terreno de 600 m2 hemos diseñado este proyecto inmobiliario en la ciudad de Quito, Valle de los chillos. Son viviendas de 100 m2 en 3 plantas. Hemos aprovechado el terreno y sus retiros al máximo posible, el resultado es increíble.',
+    youtubeUrl: 'https://www.youtube.com/watch?v=8GWdgnPiOY8'
+  },
+  {
+    year: "2025",
+    name: 'Residencia del Encanto',
+    type: "Residencia",
+    floors: "2 pisos",
+    area: "594 m²",
+    location: "La Armenia, Ecuador",
+    category: "residential",
+    image: "/ReresidenciaDelEncanto.jpg",
+    description: 'En un terreno de 24m x 40 se desarrolla una vivienda para una joven familia con necesidades propias del día a día, pero pensada también en el desarrollo y crecimiento de sus pequeños niños. Con un Home Office de ensueño en donde las áreas de trabajo se conjugan con las de entretenimiento, en este caso la Música. Un diseño que ha cuidado cada detalle y requerimiento, sin descuidar la forma, funcionalidad y estética propia de la arquitectura del valle de Quito - Ecuador.',
+    youtubeUrl: 'https://www.youtube.com/watch?v=4i6sbW0LLt8&t=2s'
+  },
+  {
+    year: "2026",
+    name: 'Residencias las Retamas',
+    type: "Residencia",
+    floors: "2 pisos",
+    area: "575 m²",
+    location: "Capelo, Ecuador",
+    category: "residential",
+    image: "/LasRetamas.jpg",
+    description: 'Dos modernas residencias de 215 m2 en dos plantas, desarrolladas en un terreno de 20 m de frente por 50 m de profundidad. El minimalismo de sus lineas rectas se conjungan con dobles alturas, con balcones y volados que trabajan en conjunto de acuerdo al soleamiento de este bello predio ubicado en Sangolqui - Ecuador.',
+    youtubeUrl: 'https://www.youtube.com/watch?v=a4BeSTizz5U&t=2s'
   }
 ];
 
@@ -214,7 +196,7 @@ const Projects = () => {
           className="text-center px-6 relative z-10"
         >
           <h1 className="font-heading text-5xl md:text-7xl mb-4 text-foreground drop-shadow-md">Proyectos Arquitectónicos</h1>
-          <p className="text-muted-foreground tracking-luxury uppercase">Planificación 2014 - 2021</p>
+          <p className="text-muted-foreground tracking-luxury uppercase">Planificación 2022 - 2026</p>
         </motion.div>
       </div>
 
@@ -504,7 +486,7 @@ const Projects = () => {
                     </div>
                     <div className="space-y-1">
                       <div className="text-xs tracking-luxury uppercase text-muted-foreground flex items-center gap-1.5 mb-2">
-                        <Maximize className="w-3.5 h-3.5" /> Área
+                        <Maximize className="w-3.5 h-3.5" /> Área Bruta
                       </div>
                       <div className="text-foreground font-semibold text-lg">{selectedProject.area}</div>
                     </div>
@@ -523,15 +505,21 @@ const Projects = () => {
                         Descripción del Proyecto
                       </h3>
                       <div className="text-foreground leading-relaxed space-y-4">
-                        <p>
-                          Espectacular proyecto de planificación arquitectónica de tipo <strong>{selectedProject.type.toLowerCase()}</strong> ubicado estratégicamente en <strong>{selectedProject.location}</strong>.
-                        </p>
-                        <p>
-                          El desarrollo {selectedProject.units ? `contempla la creación de ${selectedProject.units.toLowerCase()}` : `está diseñado`} en una estructura de <strong>{selectedProject.floors.toLowerCase()}</strong>, alcanzando un área bruta total de <strong>{selectedProject.area}</strong>.
-                        </p>
-                        <p className="text-muted-foreground">
-                          Cada detalle ha sido cuidadosamente planificado para maximizar la funcionalidad del espacio y la integración con el entorno, marcando un hito en el portafolio arquitectónico del año {selectedProject.year}.
-                        </p>
+                        <p>{selectedProject.description}</p>
+                      </div>
+                      
+                      <div className="mt-8">
+                        <a 
+                          href={selectedProject.youtubeUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-block"
+                        >
+                          <Button className="bg-[#FF0000] hover:bg-[#CC0000] text-white flex items-center gap-2 tracking-luxury">
+                            <Youtube className="w-5 h-5" />
+                            Ver Video en YouTube
+                          </Button>
+                        </a>
                       </div>
                     </div>
 

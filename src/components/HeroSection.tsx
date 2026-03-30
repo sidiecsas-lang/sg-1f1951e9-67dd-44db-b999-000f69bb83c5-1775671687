@@ -32,7 +32,7 @@ const HeroSection = () => {
         >
           CRISTINA
           <br />
-          GRANDA, ARQ
+          GRANDA
         </motion.h1>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

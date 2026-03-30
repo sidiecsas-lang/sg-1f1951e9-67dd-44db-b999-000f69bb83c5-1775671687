@@ -7,7 +7,11 @@ const Footer = () => {
       <div className="px-6 md:px-12 max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
-            <h4 className="text-heading text-2xl tracking-luxury text-foreground mb-4">CRISTINA GRANDA</h4>
+            <img 
+              src="/logo_2024_blanco-07.png" 
+              alt="Cristina Granda" 
+              className="h-12 w-auto mb-4"
+            />
             <p className="text-sm text-muted-foreground leading-relaxed">
               Diseño arquitectónico y construcción de viviendas de arquitecto signature. Creamos espacios que inspiran.
             </p>

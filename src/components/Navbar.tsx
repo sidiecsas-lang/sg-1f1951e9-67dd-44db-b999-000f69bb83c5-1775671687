@@ -32,8 +32,12 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="flex items-center justify-between px-6 md:px-12 py-4">
-        <Link to="/" className="text-heading text-2xl md:text-3xl font-light tracking-luxury text-foreground">
-          CRISTINA GRANDA
+        <Link to="/" className="flex items-center">
+          <img 
+            src="/logo_2024_blanco-07.png" 
+            alt="Cristina Granda" 
+            className="h-8 md:h-10 w-auto"
+          />
         </Link>
 
         <div className="hidden md:flex items-center gap-10">

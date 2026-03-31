@@ -4,13 +4,28 @@ import { ArrowLeft } from "lucide-react";
 import { useEffect } from "react";
 
 const projects = [
-  { year: "2014", name: "Conjunto Hab Los Quindes", detail: "70 viviendas, Ambato" },
+  { year: "2014", name: "Conjunto Habitacional Los Quindes", detail: "70 viviendas, Ambato" },
+  { year: "2015", name: "Residencia Myriam Cando Peña", detail: "Residencia Unifamiliar, Quito" },
   { year: "2015", name: "\"Las Orquídeas\" Conjunto Habitacional", detail: "156 viviendas, San Rafael" },
+  { year: "2016", name: "Residencia Chablay Trujillo", detail: "Residencia Multifamiliar, 3 unidades, Quito" },
   { year: "2017", name: "Edificio San Gregorio Plaza", detail: "47 departamentos, Quito" },
+  { year: "2018", name: "Modificatorio Orquídeas de San Rafael", detail: "Conjunto Habitacional, 156 viviendas, Quito" },
   { year: "2019", name: "Residenciales Montresor", detail: "8 viviendas, Calderón" },
+  { year: "2019", name: "Terrazas de Sión", detail: "Conjunto Habitacional, 21 viviendas, Quito" },
+  { year: "2019", name: "Terrazas de Conocoto", detail: "Conjunto Habitacional, 6 unidades, Quito" },
+  { year: "2020", name: "La Isla Lodge", detail: "Complejo Hotel Lodge, Cotacachi" },
+  { year: "2020", name: "Aquaponic INGSA", detail: "Complejo y Residencial, Guayllabamba" },
+  { year: "2021", name: "Residencia Tatiana León", detail: "Residencia Multifamiliar, 2 unidades, Quito" },
+  { year: "2021", name: "Nativa Crops Oficinas y Residencia", detail: "Oficinas y Residencial, 5 unidades, Quito" },
+  { year: "2022", name: "Residencia Santa Clara", detail: "Sangolquí" },
+  { year: "2022", name: "La Casa del Prioste", detail: "Atahuallpa" },
+  { year: "2022", name: "Residencia Tragaluz", detail: "Alangasí" },
   { year: "2023", name: "Conjunto Hab Guayllabamba Gardens", detail: "39 viviendas, Guayllabamba" },
+  { year: "2023", name: "Residencia Flia Sierra (Un solo Andar)", detail: "Alangasí" },
+  { year: "2023", name: "Residencia Dorada", detail: "Guayllabamba" },
   { year: "2024", name: "Conjunto Hab Mirano Valley", detail: "5 viviendas, Conocoto" },
-  { year: "2024", name: "Residencias Las Retamas", detail: "2 viviendas, Sangolquí" },
+  { year: "2025", name: "Residencia del Encanto", detail: "La Armenia" },
+  { year: "2026", name: "Residencias Las Retamas", detail: "2 viviendas, Capelo" },
 ];
 
 const About = () => {
@@ -27,8 +42,12 @@ const About = () => {
             <ArrowLeft size={18} />
             <span className="text-xs tracking-luxury uppercase">Volver</span>
           </Link>
-          <Link to="/" className="text-heading text-2xl font-light tracking-luxury text-foreground">
-            CRISTINA GRANDA
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/logo_CG_2026_transparente_Mesa_de_trabajo_1_copia.png" 
+              alt="Cristina Granda" 
+              className="h-8 w-auto"
+            />
           </Link>
           <div className="w-20" />
         </div>
@@ -120,7 +139,7 @@ const About = () => {
               </div>
               <div>
                 <p className="text-xs tracking-luxury text-primary mb-1">2019 – Presente</p>
-                <h3 className="text-lg text-foreground font-light">Diseño y Planificación & Socia Fundadora</h3>
+                <h3 className="text-lg text-foreground font-light">Diseño y Construcción & Socia Fundadora</h3>
                 <p className="text-sm text-muted-foreground">Squizio Arquitectura Cia. Ltda.</p>
               </div>
             </div>
@@ -181,7 +200,7 @@ const About = () => {
             className="mt-20 text-center"
           >
             <span className="text-7xl md:text-9xl font-light text-primary tracking-luxury">53 297</span>
-            <p className="text-sm tracking-luxury uppercase text-muted-foreground mt-4">m² diseñados y aprobados</p>
+            <p className="text-sm tracking-luxury uppercase text-muted-foreground mt-4">m² Diseñados - Construidos</p>
           </motion.div>
         </div>
       </section>

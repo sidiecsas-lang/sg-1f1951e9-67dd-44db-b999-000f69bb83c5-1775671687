@@ -1,43 +1,43 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import cristinaImg from "@/assets/cristina-granda.png";
+import aboutImg from "@/assets/about-team.jpg";
 
 const AboutSection = () => {
   return (
     <section id="nosotros" className="py-24 md:py-32 bg-secondary">
-      <div className="px-6 md:px-12 text-center mb-16">
-        <p className="text-xs tracking-wide-luxury uppercase text-primary mb-4">Tradición & Sofisticación</p>
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+      <div className="px-6 md:px-12 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-3xl md:text-4xl lg:text-5xl font-light text-foreground max-w-4xl mx-auto leading-relaxed"
+          className="relative overflow-hidden aspect-square"
         >
-          El concepto único de Cristina Granda se inspira en la integración perfecta entre arquitectura, naturaleza y el arte de vivir.
-        </motion.h2>
-      </div>
+          <img
+            src={aboutImg}
+            alt="Cristina Granda Arquitectura"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-background/10" />
+        </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="px-6 md:px-12 max-w-6xl mx-auto"
-      >
-        <div className="relative overflow-hidden aspect-[16/9] max-w-4xl mx-auto">
-          <img src={cristinaImg} alt="Cristina Granda, Arquitecta" className="w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-background/20" />
-        </div>
-        <div className="mt-8 text-center">
-          <Link
-            to="/nosotros"
-            className="border border-foreground/40 px-8 py-3 text-xs tracking-luxury uppercase text-foreground/80 hover:bg-foreground/10 transition-all duration-300 inline-block"
-          >
-            Conocer más sobre nosotros
-          </Link>
-        </div>
-      </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <p className="text-xs tracking-wide-luxury uppercase text-primary mb-4">Sobre Nosotros</p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-8 tracking-luxury leading-tight">
+            CRISTINA GRANDA ARQUITECTURA
+          </h2>
+          <p className="text-lg text-secondary-foreground font-light leading-relaxed mb-6">
+            En Cristina Granda Arquitectura creemos que cada proyecto es único y merece una atención dedicada y personalizada. Nuestra filosofía de diseño se centra en entender profundamente las necesidades y aspiraciones de nuestros clientes, para crear espacios que no solo sean estéticamente impresionantes, sino también funcionales y sostenibles.
+          </p>
+          <p className="text-lg text-secondary-foreground font-light leading-relaxed">
+            Con años de experiencia en el diseño arquitectónico y la construcción, hemos desarrollado un enfoque integral que abarca desde la conceptualización inicial hasta la entrega final, asegurando que cada detalle sea perfectamente ejecutado.
+          </p>
+        </motion.div>
+      </div>
     </section>
   );
 };

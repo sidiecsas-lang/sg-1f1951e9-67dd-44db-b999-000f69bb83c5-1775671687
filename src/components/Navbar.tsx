@@ -34,7 +34,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between px-6 md:px-12 py-4">
         <Link to="/" className="flex items-center">
           <img 
-            src="/logo_2024_blanco-07.png" 
+            src="/logo_CG_2026_transparente_Mesa_de_trabajo_1_copia.png" 
             alt="Cristina Granda" 
             className="h-8 md:h-10 w-auto"
           />

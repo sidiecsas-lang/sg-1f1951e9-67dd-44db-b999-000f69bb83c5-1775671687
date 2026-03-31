@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
             <img 
-              src="/logo_2024_blanco-07.png" 
+              src="/logo_CG_2026_transparente_Mesa_de_trabajo_1_copia.png" 
               alt="Cristina Granda" 
               className="h-12 w-auto mb-4"
             />

@@ -1,18 +1,17 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import projectVilla from "@/assets/project-villa.jpg";
-import projectPenthouse from "@/assets/project-penthouse.jpg";
-import projectMountain from "@/assets/project-mountain.jpg";
+import { useNavigate } from "react-router-dom";
 
 const projects = [
-  { name: "GUAYLLABAMBA GARDENS", location: "Vivienda Multifamiliar", image: projectVilla },
-  { name: "MIRANO VALLEY", location: "Vivienda Multifamiliar", image: projectPenthouse },
-  { name: "RESIDENCIA DEL ENCANTO", location: "Vivienda Unifamiliar", image: projectMountain },
+  { name: "RESIDENCIAS LAS RETAMAS", location: "Vivienda Residencial", image: "/ResidenciasLasRetamas1.jpg" },
+  { name: "RESIDENCIA DEL ENCANTO", location: "Vivienda Residencial", image: "/ReresidenciaDelEncanto.jpg" },
+  { name: "GUAYLLABAMBA GARDENS", location: "Vivienda Multifamiliar", image: "/GuayllabambaGardens.png" },
 ];
 
 const ProjectsCarousel = () => {
   const [current, setCurrent] = useState(0);
+  const navigate = useNavigate();
 
   const next = () => setCurrent((c) => (c + 1) % projects.length);
   const prev = () => setCurrent((c) => (c - 1 + projects.length) % projects.length);
@@ -48,7 +47,10 @@ const ProjectsCarousel = () => {
                   {projects[current].name}
                 </h3>
                 <p className="text-sm text-muted-foreground mt-2 tracking-luxury">{projects[current].location}</p>
-                <button className="mt-4 border border-foreground/40 px-6 py-2 text-xs tracking-luxury uppercase text-foreground/80 hover:bg-foreground/10 transition-all duration-300">
+                <button 
+                  onClick={() => navigate("/proyectos")}
+                  className="mt-4 border border-foreground/40 px-6 py-2 text-xs tracking-luxury uppercase text-foreground/80 hover:bg-foreground/10 transition-all duration-300"
+                >
                   Conocer más
                 </button>
               </div>

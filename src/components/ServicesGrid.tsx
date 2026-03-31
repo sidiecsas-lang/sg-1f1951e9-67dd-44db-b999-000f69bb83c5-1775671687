@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import serviceConsulting from "@/assets/service-consulting.jpg";
 
 const services = [
@@ -11,6 +12,8 @@ const services = [
 ];
 
 const ServicesGrid = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="servicios" className="py-24 md:py-32 bg-secondary">
       <div className="px-6 md:px-12 mb-16 text-center">
@@ -29,6 +32,7 @@ const ServicesGrid = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: i * 0.1 }}
             className="group relative aspect-[4/5] overflow-hidden cursor-pointer"
+            onClick={() => navigate("/nosotros")}
           >
             <img
               src={service.image}

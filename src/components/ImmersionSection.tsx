@@ -81,7 +81,7 @@ const ImmersionSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
             {stats.map((stat, i) => (
               <motion.div
                 key={stat.label}
@@ -108,7 +108,7 @@ const ImmersionSection = () => {
               <span className="text-6xl md:text-7xl font-light text-primary tracking-luxury">
                 {m2Count.toLocaleString("es-ES")}
               </span>
-              <p className="text-xs tracking-luxury uppercase text-muted-foreground mt-3">m² Diseñados - Construidos</p>
+              <p className="text-xs tracking-luxury uppercase text-muted-foreground mt-3">M² Diseñados - Construidos</p>
             </motion.div>
           </div>
         </div>
@@ -136,7 +136,7 @@ const ImmersionSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative aspect-[9/16] overflow-hidden group"
+              className="relative aspect-[9/16] overflow-hidden group rounded-sm"
             >
               <video
                 className="w-full h-full object-cover"
@@ -155,7 +155,7 @@ const ImmersionSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="relative aspect-[9/16] overflow-hidden group"
+              className="relative aspect-[9/16] overflow-hidden group rounded-sm"
             >
               <video
                 className="w-full h-full object-cover"
@@ -174,7 +174,7 @@ const ImmersionSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative aspect-[9/16] overflow-hidden group"
+              className="relative aspect-[9/16] overflow-hidden group rounded-sm"
             >
               <video
                 className="w-full h-full object-cover"

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-const useCountUp = (target: number, duration = 2000, startOnView = true) => {
+const useCountUp = (target: number, duration = 2500, startOnView = true) => {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
   const started = useRef(false);
@@ -41,77 +41,156 @@ const ImmersionSection = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-background">
-      <div className="px-6 md:px-12 max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-start">
-          {/* Left — Title */}
+    <>
+      <section className="py-24 md:py-32 bg-background">
+        <div className="px-6 md:px-12 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-start">
+            {/* Left — Title */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <p className="text-xs tracking-wide-luxury uppercase text-primary mb-6">Nuestro Método</p>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground leading-tight">
+                Seis semanas de
+                <br />
+                <span className="italic text-primary">inmersión total</span>
+              </h2>
+            </motion.div>
+
+            {/* Right — Copy */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="space-y-6"
+            >
+              <p className="text-lg text-secondary-foreground font-light leading-relaxed">
+                Para CG Arquitectura cada proyecto es una obra única, una pieza inigualable. Nuestro proceso de diseño implica una inmersión profunda para entender cada una de las necesidades de nuestros clientes, solucionándolas específicamente en el espacio.
+              </p>
+              <p className="text-lg text-secondary-foreground font-light leading-relaxed">
+                Nos adentramos en su entorno para descifrar sus rutinas diarias y aspiraciones personales. Este enfoque nos permite tener proyectos exclusivos, únicos desde su concepción, así como únicos son cada uno de nuestros clientes.
+              </p>
+              <p className="text-lg text-secondary-foreground font-light leading-relaxed">
+                Proyectamos obras estéticamente impecables, totalmente construibles. Nuestra experiencia en construcción nos garantiza que el render sea igual al proyecto finalmente construido.
+              </p>
+            </motion.div>
+          </div>
+
+          {/* Stats */}
+          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
+            {stats.map((stat, i) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="text-center"
+              >
+                <span className="text-5xl md:text-6xl font-light text-foreground tracking-luxury">{stat.value}</span>
+                <p className="text-xs tracking-luxury uppercase text-muted-foreground mt-3">{stat.label}</p>
+              </motion.div>
+            ))}
+
+            {/* m² counter — visually prominent */}
+            <motion.div
+              ref={m2Ref}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-center col-span-2 md:col-span-1"
+            >
+              <span className="text-6xl md:text-7xl font-light text-primary tracking-luxury">
+                {m2Count.toLocaleString("es-ES")}
+              </span>
+              <p className="text-xs tracking-luxury uppercase text-muted-foreground mt-3">m² Diseñados - Construidos</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Video Gallery Section */}
+      <section className="py-24 md:py-32 bg-secondary">
+        <div className="px-6 md:px-12 max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            className="text-center mb-16"
           >
-            <p className="text-xs tracking-wide-luxury uppercase text-primary mb-6">Nuestro Método</p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground leading-tight">
-              Seis semanas de
-              <br />
-              <span className="italic text-primary">inmersión total</span>
+            <p className="text-xs tracking-wide-luxury uppercase text-primary mb-4">Nuestros Espacios</p>
+            <h2 className="text-4xl md:text-5xl font-light text-foreground tracking-luxury">
+              RECORRIDOS VIRTUALES
             </h2>
           </motion.div>
 
-          {/* Right — Copy */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-6"
-          >
-            <p className="text-sm text-secondary-foreground leading-relaxed">
-              En Cristina Granda Arquitectura creemos que cada proyecto es único y merece una atención dedicada y personalizada. Nuestro método de trabajo se basa en seis semanas de inmersión profunda con cada cliente.
-            </p>
-            <p className="text-sm text-secondary-foreground leading-relaxed">
-              Durante este período, nos sumergimos en su mundo, entendemos sus aspiraciones, estudiamos su rutina diaria y descubrimos la esencia de lo que hace que un espacio sea verdaderamente suyo.
-            </p>
-            <p className="text-sm text-secondary-foreground leading-relaxed">
-              Este enfoque intensivo nos permite crear espacios que no solo son estéticamente impecables, sino que también funcionan perfectamente para la vida real de nuestros clientes.
-            </p>
-          </motion.div>
-        </div>
-
-        {/* Stats */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
-          {stats.map((stat, i) => (
+          <div className="grid md:grid-cols-3 gap-6">
             <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="text-center"
+              transition={{ duration: 0.6 }}
+              className="relative aspect-[9/16] overflow-hidden group"
             >
-              <span className="text-5xl md:text-6xl font-light text-foreground tracking-luxury">{stat.value}</span>
-              <p className="text-xs tracking-luxury uppercase text-muted-foreground mt-3">{stat.label}</p>
+              <video
+                className="w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src="https://cristinagranda.com/media/VIDEOentradaVERTICALdia2.webm" type="video/webm" />
+              </video>
+              <div className="absolute inset-0 bg-background/20 group-hover:bg-background/10 transition-all duration-500" />
             </motion.div>
-          ))}
 
-          {/* m² counter — visually prominent */}
-          <motion.div
-            ref={m2Ref}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-center col-span-2 md:col-span-1"
-          >
-            <span className="text-6xl md:text-7xl font-light text-primary tracking-luxury">
-              {m2Count.toLocaleString("es-ES")}
-            </span>
-            <p className="text-xs tracking-luxury uppercase text-muted-foreground mt-3">m² construidos</p>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="relative aspect-[9/16] overflow-hidden group"
+            >
+              <video
+                className="w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src="https://cristinagranda.com/media/VIDEORetamasingresosala.webm" type="video/webm" />
+              </video>
+              <div className="absolute inset-0 bg-background/20 group-hover:bg-background/10 transition-all duration-500" />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative aspect-[9/16] overflow-hidden group"
+            >
+              <video
+                className="w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src="https://cristinagranda.com/media/VIDEOSalaElEncanto.webm" type="video/webm" />
+              </video>
+              <div className="absolute inset-0 bg-background/20 group-hover:bg-background/10 transition-all duration-500" />
+            </motion.div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

@@ -17,7 +17,7 @@ const SpacesSection = () => {
       <div className="px-6 md:px-12 mb-12 text-center">
         <p className="text-xs tracking-wide-luxury uppercase text-primary mb-4">Espacios & Lugares</p>
         <h3 className="text-lg md:text-xl text-secondary-foreground font-light max-w-2xl mx-auto leading-relaxed">
-          Más que diseñar estructuras, Cristina Granda interpreta el mundo para proyectar escenarios de vida. Inspirada en la excelencia del diseño global, cada espacio es una pieza única, trazada a la medida de quienes lo habitan.
+          La distribución de los espacios siempre es estratégica, aquí entra en juego la expertise del arquitecto y las necesidades de los ocupantes. Buscamos optimizar los m² construidos para que sean verdaderamente útiles, con orden en circulaciones y la creación de diferentes perspectivas y visuales. Buscamos generar sorpresa en lugares inesperados, pensamos en ese "wow" de los espacios tan característico en nuestros proyectos.
         </h3>
       </div>
 

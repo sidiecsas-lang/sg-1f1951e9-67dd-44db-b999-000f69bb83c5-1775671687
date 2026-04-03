@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import aboutImg from "@/assets/about-team.jpg";
 
 const AboutSection = () => {
   return (
@@ -13,7 +12,7 @@ const AboutSection = () => {
           className="relative overflow-hidden aspect-square"
         >
           <img
-            src={aboutImg}
+            src="/FotoCristina.png"
             alt="Cristina Granda Arquitectura"
             className="w-full h-full object-cover"
           />
@@ -31,10 +30,10 @@ const AboutSection = () => {
             CRISTINA GRANDA ARQUITECTURA
           </h2>
           <p className="text-lg text-secondary-foreground font-light leading-relaxed mb-6">
-            En Cristina Granda Arquitectura creemos que cada proyecto es único y merece una atención dedicada y personalizada. Nuestra filosofía de diseño se centra en entender profundamente las necesidades y aspiraciones de nuestros clientes, para crear espacios que no solo sean estéticamente impresionantes, sino también funcionales y sostenibles.
+            La confianza que depositan nuestros clientes en CG es lo más valioso que tenemos. Esa confianza de compartirnos sus sueños y sus más íntimos deseos.
           </p>
           <p className="text-lg text-secondary-foreground font-light leading-relaxed">
-            Con años de experiencia en el diseño arquitectónico y la construcción, hemos desarrollado un enfoque integral que abarca desde la conceptualización inicial hasta la entrega final, asegurando que cada detalle sea perfectamente ejecutado.
+            Solo así es posible desarrollar proyectos totalmente personalizados y únicos, pensados en cada uno de los futuros habitantes de nuestros proyectos. Con más de 12 años de experiencia en Diseño y Construcción, hemos desarrollado un enfoque integral en la planificación Residencial, cuidando hasta el más mínimo detalle.
           </p>
         </motion.div>
       </div>

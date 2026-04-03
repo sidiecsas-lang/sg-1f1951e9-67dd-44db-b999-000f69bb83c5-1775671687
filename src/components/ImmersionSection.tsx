@@ -136,10 +136,10 @@ const ImmersionSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative aspect-[9/16] overflow-hidden group rounded-sm"
+              className="relative aspect-[9/16] bg-black overflow-hidden group rounded-sm"
             >
               <video
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-contain"
                 autoPlay
                 loop
                 muted
@@ -147,7 +147,7 @@ const ImmersionSection = () => {
               >
                 <source src="https://cristinagranda.com/media/VIDEOentradaVERTICALdia2.webm" type="video/webm" />
               </video>
-              <div className="absolute inset-0 bg-background/20 group-hover:bg-background/10 transition-all duration-500" />
+              <div className="absolute inset-0 bg-background/20 group-hover:bg-background/10 transition-all duration-500 pointer-events-none" />
             </motion.div>
 
             <motion.div
@@ -155,10 +155,10 @@ const ImmersionSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="relative aspect-[9/16] overflow-hidden group rounded-sm"
+              className="relative aspect-[9/16] bg-black overflow-hidden group rounded-sm"
             >
               <video
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-contain"
                 autoPlay
                 loop
                 muted
@@ -166,7 +166,7 @@ const ImmersionSection = () => {
               >
                 <source src="https://cristinagranda.com/media/VIDEORetamasingresosala.webm" type="video/webm" />
               </video>
-              <div className="absolute inset-0 bg-background/20 group-hover:bg-background/10 transition-all duration-500" />
+              <div className="absolute inset-0 bg-background/20 group-hover:bg-background/10 transition-all duration-500 pointer-events-none" />
             </motion.div>
 
             <motion.div
@@ -174,10 +174,10 @@ const ImmersionSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative aspect-[9/16] overflow-hidden group rounded-sm"
+              className="relative aspect-[9/16] bg-black overflow-hidden group rounded-sm"
             >
               <video
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-contain"
                 autoPlay
                 loop
                 muted
@@ -185,7 +185,7 @@ const ImmersionSection = () => {
               >
                 <source src="https://cristinagranda.com/media/VIDEOSalaElEncanto.webm" type="video/webm" />
               </video>
-              <div className="absolute inset-0 bg-background/20 group-hover:bg-background/10 transition-all duration-500" />
+              <div className="absolute inset-0 bg-background/20 group-hover:bg-background/10 transition-all duration-500 pointer-events-none" />
             </motion.div>
           </div>
         </div>

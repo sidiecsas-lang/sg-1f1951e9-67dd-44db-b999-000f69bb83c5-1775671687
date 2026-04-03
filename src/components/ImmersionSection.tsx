@@ -81,7 +81,7 @@ const ImmersionSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
+          <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
             {stats.map((stat, i) => (
               <motion.div
                 key={stat.label}
@@ -139,7 +139,7 @@ const ImmersionSection = () => {
               className="relative aspect-[9/16] overflow-hidden group rounded-sm"
             >
               <video
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
                 autoPlay
                 loop
                 muted
@@ -158,7 +158,7 @@ const ImmersionSection = () => {
               className="relative aspect-[9/16] overflow-hidden group rounded-sm"
             >
               <video
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
                 autoPlay
                 loop
                 muted
@@ -177,7 +177,7 @@ const ImmersionSection = () => {
               className="relative aspect-[9/16] overflow-hidden group rounded-sm"
             >
               <video
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
                 autoPlay
                 loop
                 muted

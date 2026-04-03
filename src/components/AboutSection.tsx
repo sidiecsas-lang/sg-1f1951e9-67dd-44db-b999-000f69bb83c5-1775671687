@@ -29,10 +29,10 @@ const AboutSection = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-8 tracking-luxury leading-tight">
             CRISTINA GRANDA ARQUITECTURA
           </h2>
-          <p className="text-lg text-secondary-foreground font-light leading-relaxed mb-6">
+          <p className="text-heading text-lg text-secondary-foreground font-light leading-relaxed mb-6">
             La confianza que depositan nuestros clientes en CG es lo más valioso que tenemos. Esa confianza de compartirnos sus sueños y sus más íntimos deseos.
           </p>
-          <p className="text-lg text-secondary-foreground font-light leading-relaxed">
+          <p className="text-heading text-lg text-secondary-foreground font-light leading-relaxed">
             Solo así es posible desarrollar proyectos totalmente personalizados y únicos, pensados en cada uno de los futuros habitantes de nuestros proyectos. Con más de 12 años de experiencia en Diseño y Construcción, hemos desarrollado un enfoque integral en la planificación Residencial, cuidando hasta el más mínimo detalle.
           </p>
         </motion.div>

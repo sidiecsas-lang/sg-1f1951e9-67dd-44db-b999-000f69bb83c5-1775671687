@@ -68,13 +68,13 @@ const ImmersionSection = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="space-y-6"
             >
-              <p className="text-lg text-secondary-foreground font-light leading-relaxed">
+              <p className="text-heading text-lg text-secondary-foreground font-light leading-relaxed">
                 Para CG Arquitectura cada proyecto es una obra única, una pieza inigualable. Nuestro proceso de diseño implica una inmersión profunda para entender cada una de las necesidades de nuestros clientes, solucionándolas específicamente en el espacio.
               </p>
-              <p className="text-lg text-secondary-foreground font-light leading-relaxed">
+              <p className="text-heading text-lg text-secondary-foreground font-light leading-relaxed">
                 Nos adentramos en su entorno para descifrar sus rutinas diarias y aspiraciones personales. Este enfoque nos permite tener proyectos exclusivos, únicos desde su concepción, así como únicos son cada uno de nuestros clientes.
               </p>
-              <p className="text-lg text-secondary-foreground font-light leading-relaxed">
+              <p className="text-heading text-lg text-secondary-foreground font-light leading-relaxed">
                 Proyectamos obras estéticamente impecables, totalmente construibles. Nuestra experiencia en construcción nos garantiza que el render sea igual al proyecto finalmente construido.
               </p>
             </motion.div>

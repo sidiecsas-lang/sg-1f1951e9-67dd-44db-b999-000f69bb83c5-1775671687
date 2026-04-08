@@ -140,7 +140,7 @@ const ImmersionSection = () => {
               style={{ aspectRatio: '9/16' }}
             >
               <video
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover"
                 autoPlay
                 loop
                 muted
@@ -160,7 +160,7 @@ const ImmersionSection = () => {
               style={{ aspectRatio: '9/16' }}
             >
               <video
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover"
                 autoPlay
                 loop
                 muted
@@ -180,7 +180,7 @@ const ImmersionSection = () => {
               style={{ aspectRatio: '9/16' }}
             >
               <video
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover"
                 autoPlay
                 loop
                 muted

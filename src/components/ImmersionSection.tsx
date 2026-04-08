@@ -69,13 +69,13 @@ const ImmersionSection = () => {
               className="space-y-6"
             >
               <p className="text-heading text-lg text-secondary-foreground font-light leading-relaxed">
-                Para CG Arquitectura cada proyecto es una obra única, una pieza inigualable. Nuestro proceso de diseño implica una inmersión profunda para entender cada una de las necesidades de nuestros clientes, solucionándolas específicamente en el espacio.
+                Para CG Arquitectura cada proyecto es una pieza inigualable, nuestro proceso de diseño implica una inmersión profunda con nuestros clientes y sus familias, enfocados en entender sus necesidades, sueños y aspiraciones.
               </p>
               <p className="text-heading text-lg text-secondary-foreground font-light leading-relaxed">
-                Nos adentramos en su entorno para descifrar sus rutinas diarias y aspiraciones personales. Este enfoque nos permite tener proyectos exclusivos, únicos desde su concepción, así como únicos son cada uno de nuestros clientes.
+                Solo así es posible desarrollar proyectos totalmente personalizados, descifrando sus rutinas diarias y sus formas de habitar el espacio. Este enfoque nos permite tener proyectos exclusivos, únicos, como cada uno de nuestros clientes.
               </p>
               <p className="text-heading text-lg text-secondary-foreground font-light leading-relaxed">
-                Proyectamos obras estéticamente impecables, totalmente construibles. Nuestra experiencia en construcción nos garantiza que el render sea igual al proyecto finalmente construido.
+                Proyectamos obras estéticamente impecables y totalmente construibles. Nuestra experiencia en construcción nos garantiza que el render se haga realidad tangible en el terreno y el espacio.
               </p>
             </motion.div>
           </div>
@@ -136,7 +136,8 @@ const ImmersionSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative aspect-[9/16] bg-black overflow-hidden group rounded-sm"
+              className="relative w-full bg-black overflow-hidden group rounded-sm"
+              style={{ aspectRatio: '9/16' }}
             >
               <video
                 className="w-full h-full object-contain"
@@ -145,7 +146,7 @@ const ImmersionSection = () => {
                 muted
                 playsInline
               >
-                <source src="https://cristinagranda.com/media/VIDEOentradaVERTICALdia2.webm" type="video/webm" />
+                <source src="https://cristinagranda.com/media/videovertical.mp4" type="video/mp4" />
               </video>
               <div className="absolute inset-0 bg-background/20 group-hover:bg-background/10 transition-all duration-500 pointer-events-none" />
             </motion.div>
@@ -155,7 +156,8 @@ const ImmersionSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="relative aspect-[9/16] bg-black overflow-hidden group rounded-sm"
+              className="relative w-full bg-black overflow-hidden group rounded-sm"
+              style={{ aspectRatio: '9/16' }}
             >
               <video
                 className="w-full h-full object-contain"
@@ -164,7 +166,7 @@ const ImmersionSection = () => {
                 muted
                 playsInline
               >
-                <source src="https://cristinagranda.com/media/VIDEORetamasingresosala.webm" type="video/webm" />
+                <source src="https://cristinagranda.com/media/videofrente.mp4" type="video/mp4" />
               </video>
               <div className="absolute inset-0 bg-background/20 group-hover:bg-background/10 transition-all duration-500 pointer-events-none" />
             </motion.div>
@@ -174,7 +176,8 @@ const ImmersionSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative aspect-[9/16] bg-black overflow-hidden group rounded-sm"
+              className="relative w-full bg-black overflow-hidden group rounded-sm"
+              style={{ aspectRatio: '9/16' }}
             >
               <video
                 className="w-full h-full object-contain"
@@ -183,7 +186,7 @@ const ImmersionSection = () => {
                 muted
                 playsInline
               >
-                <source src="https://cristinagranda.com/media/VIDEOSalaElEncanto.webm" type="video/webm" />
+                <source src="https://cristinagranda.com/media/videoverticalsocial.mp4" type="video/mp4" />
               </video>
               <div className="absolute inset-0 bg-background/20 group-hover:bg-background/10 transition-all duration-500 pointer-events-none" />
             </motion.div>

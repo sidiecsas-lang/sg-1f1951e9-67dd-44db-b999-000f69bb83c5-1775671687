@@ -12,7 +12,7 @@ const servicesData: ServiceGallery[] = [
   { 
     name: "Diseño Arquitectónico", 
     coverImage: "/Disenio-Arquitectonico.jpg",
-    images: ["/Disenio-Arquitectonico.jpg", "/Disenioarquitectonico.jpg"]
+    images: ["/Disenio-Arquitectonico.jpg", "/Disenioarquitectonico.jpg", "/Disenioarquitectonico.jpg"]
   },
   { 
     name: "Construcción", 
@@ -27,7 +27,7 @@ const servicesData: ServiceGallery[] = [
   { 
     name: "Paisajismo", 
     coverImage: "/Paisajismo.jpg",
-    images: ["/Paisajismo.jpg", "/paisajismo.jpg"]
+    images: ["/Paisajismo.jpg", "/paisajismo.jpg", "/paisajismo1.jpg"]
   },
   { 
     name: "Remodelación", 
@@ -37,7 +37,7 @@ const servicesData: ServiceGallery[] = [
   { 
     name: "Consultoría", 
     coverImage: "/consultoria.jpg",
-    images: ["/consultoria.jpg", "/consultoria.png"]
+    images: ["/consultoria.jpg", "/consultoria.png", "/consultoria1.png"]
   },
 ];
 

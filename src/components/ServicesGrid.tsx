@@ -12,7 +12,7 @@ const servicesData: ServiceGallery[] = [
   { 
     name: "Diseño Arquitectónico", 
     coverImage: "/Disenio-Arquitectonico.jpg",
-    images: ["/Disenio-Arquitectonico.jpg", "/Disenioarquitectonico.jpg", "/Disenioarquitectonico.jpg"]
+    images: ["/Disenio-Arquitectonico.jpg", "/Disenioarquitectonico.jpg", "/Disenioarquitectonico2.jpg"]
   },
   { 
     name: "Construcción", 
@@ -37,7 +37,7 @@ const servicesData: ServiceGallery[] = [
   { 
     name: "Consultoría", 
     coverImage: "/consultoria.jpg",
-    images: ["/consultoria.jpg", "/consultoria.png", "/consultoria1.png"]
+    images: ["/consultoria.jpg", "/consultoria.png", "/consultoria2.png"]
   },
 ];
 

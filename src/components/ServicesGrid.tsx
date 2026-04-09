@@ -12,27 +12,27 @@ const servicesData: ServiceGallery[] = [
   { 
     name: "Diseño Arquitectónico", 
     coverImage: "/Disenio-Arquitectonico.jpg",
-    images: ["/Disenioarquitectonico.jpg"]
+    images: ["/Disenio-Arquitectonico.jpg", "/Disenioarquitectonico.jpg"]
   },
   { 
     name: "Construcción", 
     coverImage: "/Construccio_n.jpg",
-    images: ["/construccion.jpg", "/construccion.png"]
+    images: ["/Construccio_n.jpg", "/construccion.jpg", "/construccion.png"]
   },
   { 
     name: "Interiorismo", 
     coverImage: "/Interiorismo.png",
-    images: ["/interiorismo.jpg", "/interiorismo.png"]
+    images: ["/Interiorismo.png", "/interiorismo.jpg", "/interiorismo.png"]
   },
   { 
     name: "Paisajismo", 
     coverImage: "/Paisajismo.jpg",
-    images: ["/paisajismo.jpg"]
+    images: ["/Paisajismo.jpg", "/paisajismo.jpg"]
   },
   { 
     name: "Remodelación", 
     coverImage: "/Remodelacion.jpg",
-    images: ["/remodelacion.jpg", "/remodelacion.png"]
+    images: ["/Remodelacion.jpg", "/remodelacion.jpg", "/remodelacion.png"]
   },
   { 
     name: "Consultoría", 
@@ -137,7 +137,7 @@ const ServicesGrid = () => {
               </button>
 
               {/* Image container */}
-              <div className="relative aspect-[4/3] bg-muted rounded-lg overflow-hidden">
+              <div className="relative aspect-[4/3] bg-black rounded-lg overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={currentImageIndex}

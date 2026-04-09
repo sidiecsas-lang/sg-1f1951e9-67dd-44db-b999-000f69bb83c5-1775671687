@@ -18,7 +18,7 @@ const ProjectsCarousel = () => {
 
   return (
     <section id="proyectos" className="py-24 md:py-32 bg-background">
-      <div className="px-6 md:px-12 mb-12">
+      <div className="px-6 md:px-12 mb-12 text-center">
         <p className="text-xs tracking-wide-luxury uppercase text-primary mb-4">Nuevos Proyectos</p>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground">
           PROYECTOS DESTACADOS

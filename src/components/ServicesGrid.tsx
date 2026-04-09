@@ -17,12 +17,12 @@ const servicesData: ServiceGallery[] = [
   { 
     name: "Construcción", 
     coverImage: "/Construccio_n.jpg",
-    images: ["/construccion.png", "/construccion.jpg"]
+    images: ["/construccion.jpg", "/construccion.png"]
   },
   { 
     name: "Interiorismo", 
     coverImage: "/Interiorismo.png",
-    images: ["/interiorismo.png", "/interiorismo.jpg"]
+    images: ["/interiorismo.jpg", "/interiorismo.png"]
   },
   { 
     name: "Paisajismo", 
@@ -32,12 +32,12 @@ const servicesData: ServiceGallery[] = [
   { 
     name: "Remodelación", 
     coverImage: "/Remodelacion.jpg",
-    images: ["/remodelacion.png", "/remodelacion.jpg"]
+    images: ["/remodelacion.jpg", "/remodelacion.png"]
   },
   { 
     name: "Consultoría", 
-    coverImage: "/service-consulting.jpg",
-    images: ["/consultoria.png", "/consultoria.jpg"]
+    coverImage: "/consultoria.jpg",
+    images: ["/consultoria.jpg", "/consultoria.png"]
   },
 ];
 

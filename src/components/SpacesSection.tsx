@@ -2,11 +2,10 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import spacesCoastal from "@/assets/spaces-coastal.jpg";
-import spacesUrban from "@/assets/spaces-urban.jpg";
 
 const spaces = [
   { title: "DISEÑO QUE TRASCIENDE", subtitle: "Proyectos que integran arquitectura, naturaleza y el arte de vivir", image: spacesCoastal },
-  { title: "ELEGANCIA URBANA", subtitle: "Residencias que redefinen el lujo en la ciudad", image: spacesUrban },
+  { title: "ELEGANCIA URBANA", subtitle: "Residencias que redefinen el lujo en la ciudad", image: "/EleganciaUrbana.jpeg" },
 ];
 
 const SpacesSection = () => {
@@ -42,7 +41,7 @@ const SpacesSection = () => {
                 <h3 className="text-3xl md:text-5xl text-foreground font-light tracking-luxury drop-shadow-lg">
                   {spaces[current].title}
                 </h3>
-                <p className="text-sm text-foreground/90 mt-2 max-w-md drop-shadow-md">{spaces[current].subtitle}</p>
+                <p className="text-sm text-foreground mt-2 tracking-luxury drop-shadow-md">{spaces[current].subtitle}</p>
               </div>
             </motion.div>
           </AnimatePresence>

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const projects = [
   { name: "RESIDENCIAS LAS RETAMAS", location: "Vivienda Residencial", image: "/ResidenciasLasRetamas1.jpg" },
-  { name: "RESIDENCIA DEL ENCANTO", location: "Vivienda Residencial", image: "/ReresidenciaDelEncanto.jpg" },
+  { name: "RESIDENCIA DEL ENCANTO", location: "Vivienda Unifamiliar", image: "/ReresidenciaDelEncanto.jpg" },
   { name: "GUAYLLABAMBA GARDENS", location: "Vivienda Multifamiliar", image: "/GuayllabambaGardens.png" },
 ];
 

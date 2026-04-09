@@ -41,7 +41,7 @@ const SpacesSection = () => {
                 <h3 className="text-3xl md:text-5xl text-foreground font-light tracking-luxury drop-shadow-lg">
                   {spaces[current].title}
                 </h3>
-                <p className="text-sm text-foreground mt-2 tracking-luxury drop-shadow-md">{spaces[current].subtitle}</p>
+                <p className="text-sm text-muted-foreground mt-2 tracking-luxury drop-shadow-md">{spaces[current].subtitle}</p>
               </div>
             </motion.div>
           </AnimatePresence>

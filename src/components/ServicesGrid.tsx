@@ -12,32 +12,32 @@ const servicesData: ServiceGallery[] = [
   { 
     name: "Diseño Arquitectónico", 
     coverImage: "/Disenio-Arquitectonico.jpg",
-    images: ["/Disenio-Arquitectonico.jpg", "/Disenioarquitectonico.jpg", "/Disenioarquitectonico2.jpg"]
+    images: ["/disenoarquin1.jpg", "/disenoarquin2.jpg", "/disenoarquin3.jpg", "/disenoarquin4.jpg"]
   },
   { 
     name: "Construcción", 
     coverImage: "/Construccio_n.jpg",
-    images: ["/Construccio_n.jpg", "/construccion.jpg", "/construccion.png"]
+    images: ["/construccionn1.jpg", "/construccionn2.jpg"]
   },
   { 
     name: "Interiorismo", 
     coverImage: "/Interiorismo.png",
-    images: ["/Interiorismo.png", "/interiorismo.jpg", "/interiorismo.png"]
+    images: ["/interiorismon1.jpg", "/interiorismon2.jpg", "/interiorismon3.jpg", "/interiorismon4.jpg", "/interiorismon5.jpg", "/interiorismon6.jpg"]
   },
   { 
     name: "Paisajismo", 
     coverImage: "/Paisajismo.jpg",
-    images: ["/Paisajismo.jpg", "/paisajismo.jpg", "/paisajismo1.jpg"]
+    images: ["/paisajismon1.jpg", "/paisajismon2.jpg", "/paisajismon3.jpg"]
   },
   { 
     name: "Remodelación", 
     coverImage: "/Remodelacion.jpg",
-    images: ["/Remodelacion.jpg", "/remodelacion.jpg", "/remodelacion.png"]
+    images: ["/remodelacionn.png", "/remodelacionn1.jpg", "/remodelacionn2.jpg", "/remodelacionn3.jpg"]
   },
   { 
     name: "Consultoría", 
     coverImage: "/consultoria.jpg",
-    images: ["/consultoria.jpg", "/consultoria.png", "/consultoria2.png"]
+    images: ["/consultorian1.jpg", "/consultorian2.png", "/consultorian3.png"]
   },
 ];
 

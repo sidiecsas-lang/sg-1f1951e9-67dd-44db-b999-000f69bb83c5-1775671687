@@ -37,12 +37,12 @@ const SpacesSection = () => {
                 alt={spaces[current].title}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-background/30" />
               <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12">
-                <h3 className="text-3xl md:text-5xl text-foreground font-light tracking-luxury">
+                <h3 className="text-3xl md:text-5xl text-foreground font-light tracking-luxury drop-shadow-lg">
                   {spaces[current].title}
                 </h3>
-                <p className="text-sm text-muted-foreground mt-2 max-w-md">{spaces[current].subtitle}</p>
+                <p className="text-sm text-foreground/90 mt-2 max-w-md drop-shadow-md">{spaces[current].subtitle}</p>
               </div>
             </motion.div>
           </AnimatePresence>

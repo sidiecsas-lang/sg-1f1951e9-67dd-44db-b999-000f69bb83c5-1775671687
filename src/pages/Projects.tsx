@@ -195,7 +195,7 @@ const Projects = () => {
           transition={{ duration: 0.8 }}
           className="text-center px-6 relative z-10"
         >
-          <h1 className="font-heading text-5xl md:text-7xl mb-4 text-foreground drop-shadow-md">Proyectos Arquitectónicos</h1>
+          <h1 className="font-heading text-5xl md:text-7xl mb-4 text-foreground drop-shadow-md">Proyectos Residenciales</h1>
           <p className="text-muted-foreground tracking-luxury uppercase">Planificación 2022 - 2026</p>
         </motion.div>
       </div>

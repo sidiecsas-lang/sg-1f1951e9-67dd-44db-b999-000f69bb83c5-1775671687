@@ -9,12 +9,12 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative overflow-hidden aspect-square"
+          className="relative overflow-hidden aspect-square mx-auto w-full max-w-md md:max-w-none"
         >
           <img
             src="/FotoCristina.png"
             alt="Cristina Granda Arquitectura"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-background/10" />
         </motion.div>

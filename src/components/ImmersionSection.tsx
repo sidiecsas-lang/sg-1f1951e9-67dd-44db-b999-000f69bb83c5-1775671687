@@ -126,7 +126,7 @@ const ImmersionSection = () => {
           >
             <p className="text-xs tracking-wide-luxury uppercase text-primary mb-4">Nuestros Espacios</p>
             <h2 className="text-4xl md:text-5xl font-light text-foreground tracking-luxury">
-              RECORRIDOS VIRTUALES
+              DISEÑO INTEGRAL
             </h2>
           </motion.div>
 

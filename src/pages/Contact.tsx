@@ -239,7 +239,7 @@ const Contact = () => {
       {/* Contact Info */}
       <section className="py-12 bg-secondary border-t border-border/50">
         <div className="px-6 md:px-12 max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 text-center md:text-left mb-8">
+          <div className="grid md:grid-cols-3 gap-8 text-center mb-8">
             <div>
               <h5 className="text-xs tracking-luxury uppercase text-primary mb-3">Email</h5>
               <a href="mailto:cristina_granda@outlook.com" className="text-sm text-muted-foreground hover:text-foreground transition-colors">

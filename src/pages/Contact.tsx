@@ -216,6 +216,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            className="flex flex-col items-center"
           >
             <h2 className="text-3xl md:text-4xl font-light text-foreground mb-6">
               ¿Listo para iniciar tu proyecto?
@@ -223,14 +224,16 @@ const Contact = () => {
             <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
               Contáctanos por WhatsApp y hablemos sobre cómo podemos hacer realidad tu visión arquitectónica
             </p>
-            <Button 
-              onClick={handleWhatsAppClick}
-              size="lg"
-              className="bg-[#25D366] hover:bg-[#20BA5A] text-white px-8 py-6 text-base tracking-luxury uppercase shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <MessageCircle className="w-6 h-6 mr-3" />
-              Contactar por WhatsApp
-            </Button>
+            <div className="w-full max-w-md px-4 md:px-0">
+              <Button 
+                onClick={handleWhatsAppClick}
+                size="lg"
+                className="w-full md:w-auto bg-[#25D366] hover:bg-[#20BA5A] text-white px-8 py-6 text-base tracking-luxury uppercase shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <MessageCircle className="w-6 h-6 mr-3" />
+                Contactar por WhatsApp
+              </Button>
+            </div>
             <p className="text-sm text-muted-foreground mt-6">+593 98 455 5979</p>
           </motion.div>
         </div>

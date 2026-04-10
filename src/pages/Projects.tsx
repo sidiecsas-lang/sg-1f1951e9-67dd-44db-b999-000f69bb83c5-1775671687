@@ -426,7 +426,7 @@ const Projects = () => {
               {/* Contenido scrolleable */}
               <div className="overflow-y-auto flex-1">
                 {/* Header Image */}
-                <div className="relative h-64 md:h-80 w-full bg-muted flex items-center justify-center">
+                <div className="relative h-72 md:h-96 w-full bg-muted flex items-center justify-center">
                   {selectedProject.image ? (
                     <img 
                       src={selectedProject.image} 

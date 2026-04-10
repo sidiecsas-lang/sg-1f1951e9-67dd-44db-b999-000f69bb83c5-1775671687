@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, MessageCircle } from "lucide-react";
+import { ArrowLeft, MessageCircle, Instagram, Youtube, Facebook } from "lucide-react";
+import { FaTiktok } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -87,9 +88,49 @@ const Contact = () => {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-foreground tracking-luxury leading-tight mb-6">
               CONTACTO
             </h1>
-            <p className="text-lg text-muted-foreground font-light max-w-2xl mx-auto">
-              Síguenos en Instagram para ver nuestros últimos proyectos y novedades
+            <p className="text-lg text-muted-foreground font-light max-w-2xl mx-auto mb-6">
+              Síguenos en nuestras Redes Sociales para ver nuestros últimos proyectos y novedades
             </p>
+            
+            {/* Social Media Icons */}
+            <div className="flex justify-center gap-6 mt-8">
+              <a 
+                href="https://www.instagram.com/cristina.granda.t/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-6 h-6" />
+              </a>
+              <a 
+                href="https://www.facebook.com/Cristina.Granda.T" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-6 h-6" />
+              </a>
+              <a 
+                href="https://www.tiktok.com/@cristina.granda.t" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="TikTok"
+              >
+                <FaTiktok className="w-6 h-6" />
+              </a>
+              <a 
+                href="https://www.youtube.com/@cristina.granda.t" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="YouTube"
+              >
+                <Youtube className="w-6 h-6" />
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -198,7 +239,7 @@ const Contact = () => {
       {/* Contact Info */}
       <section className="py-12 bg-secondary border-t border-border/50">
         <div className="px-6 md:px-12 max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
+          <div className="grid md:grid-cols-3 gap-8 text-center md:text-left mb-8">
             <div>
               <h5 className="text-xs tracking-luxury uppercase text-primary mb-3">Email</h5>
               <a href="mailto:cristina_granda@outlook.com" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
@@ -215,6 +256,46 @@ const Contact = () => {
               <h5 className="text-xs tracking-luxury uppercase text-primary mb-3">Ubicación</h5>
               <p className="text-sm text-muted-foreground">Quito, Ecuador</p>
             </div>
+          </div>
+          
+          {/* Social Media Icons in Footer */}
+          <div className="flex justify-center gap-6 pt-6 border-t border-border/50">
+            <a 
+              href="https://www.instagram.com/cristina.granda.t/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="Instagram"
+            >
+              <Instagram className="w-5 h-5" />
+            </a>
+            <a 
+              href="https://www.facebook.com/Cristina.Granda.T" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="Facebook"
+            >
+              <Facebook className="w-5 h-5" />
+            </a>
+            <a 
+              href="https://www.tiktok.com/@cristina.granda.t" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="TikTok"
+            >
+              <FaTiktok className="w-5 h-5" />
+            </a>
+            <a 
+              href="https://www.youtube.com/@cristina.granda.t" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="YouTube"
+            >
+              <Youtube className="w-5 h-5" />
+            </a>
           </div>
         </div>
       </section>

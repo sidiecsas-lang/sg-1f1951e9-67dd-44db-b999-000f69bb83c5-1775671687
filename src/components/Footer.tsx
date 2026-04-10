@@ -1,4 +1,4 @@
-import { Instagram, Youtube } from "lucide-react";
+import { Instagram, Youtube, Facebook } from "lucide-react";
 import { FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
@@ -51,6 +51,15 @@ const Footer = () => {
               aria-label="Instagram"
             >
               <Instagram className="w-5 h-5" />
+            </a>
+            <a 
+              href="https://www.facebook.com/Cristina.Granda.T" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="Facebook"
+            >
+              <Facebook className="w-5 h-5" />
             </a>
             <a 
               href="https://www.tiktok.com/@cristina.granda.t" 

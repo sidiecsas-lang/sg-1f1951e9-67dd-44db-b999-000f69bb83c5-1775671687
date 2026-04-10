@@ -354,10 +354,6 @@ const Projects = () => {
                            </div>
 
                            <div className="absolute bottom-4 left-4 right-4 z-20">
-                             <Badge variant="outline" className={`mb-3 backdrop-blur-md bg-background/80 ${getCategoryColor(project.category)}`}>
-                               {getCategoryIcon(project.category)}
-                               <span className="ml-2">{getCategoryLabel(project.category)}</span>
-                             </Badge>
                              <h3 className="font-heading text-2xl text-foreground group-hover:text-primary transition-colors line-clamp-2">
                                {project.name}
                              </h3>
@@ -456,12 +452,6 @@ const Projects = () => {
                 <div className="px-6 md:px-10 pb-10">
                   {/* Título */}
                   <div className="-mt-16 relative z-10 mb-8">
-                    <Badge className={`mb-4 shadow-md ${getCategoryColor(selectedProject.category)}`}>
-                      {getCategoryIcon(selectedProject.category)}
-                      <span className="ml-2 tracking-luxury uppercase text-xs">
-                        {getCategoryLabel(selectedProject.category)}
-                      </span>
-                    </Badge>
                     <h2 className="font-heading text-3xl md:text-5xl text-foreground mb-3 leading-tight">
                       {selectedProject.name}
                     </h2>

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Instagram, Youtube, Facebook } from "lucide-react";
+import { FaTiktok } from "react-icons/fa";
 import { useEffect } from "react";
 
 const projects = [
@@ -208,10 +209,50 @@ const About = () => {
       {/* Contact bar */}
       <section className="py-12 bg-secondary border-t border-border/50">
         <div className="px-6 md:px-12 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex flex-col md:flex-row items-center gap-6 text-sm text-muted-foreground">
-            <span>cristina_granda@outlook.com</span>
-            <span>09 84 555 979</span>
-            <span>@cristina.granda.t</span>
+          <div className="flex flex-col items-center md:items-start gap-4 w-full md:w-auto">
+            <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-sm text-muted-foreground">
+              <span>cristina_granda@outlook.com</span>
+              <span>09 84 555 979</span>
+              <span>@cristina.granda.t</span>
+            </div>
+            <div className="flex gap-6">
+              <a 
+                href="https://www.instagram.com/cristina.granda.t/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://www.facebook.com/Cristina.Granda.T" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://www.tiktok.com/@cristina.granda.t" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="TikTok"
+              >
+                <FaTiktok className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://www.youtube.com/@cristina.granda.t" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="YouTube"
+              >
+                <Youtube className="w-5 h-5" />
+              </a>
+            </div>
           </div>
           <Link
             to="/"

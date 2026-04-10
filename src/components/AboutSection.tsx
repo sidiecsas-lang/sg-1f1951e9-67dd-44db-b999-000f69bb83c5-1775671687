@@ -33,7 +33,7 @@ const AboutSection = () => {
             La confianza de nuestros clientes en CG es lo más preciado que tenemos. Entendemos que nos invitan a ser parte de sus sueños y es un placer desarrollar cada uno de sus proyectos.
           </p>
           <p className="text-heading text-lg text-secondary-foreground font-light leading-relaxed">
-            Con más de 12 años de experiencia y más de 53 mil m² Diseñados y/o Construidos, CG Arquitectura ha desarrollado un enfoque integral en la planificación Residencial de proyectos, cuidando desde la implantación en el terreno de la vivienda y llegando hasta la construcción del más mínimo detalle.
+            Con más de 12 años de experiencia y más de 53 mil m² Diseñados - Construidos, CG Arquitectura ha desarrollado un enfoque integral en la planificación Residencial de proyectos, cuidando desde la implantación en el terreno de la vivienda y llegando hasta la construcción del más mínimo detalle.
           </p>
         </motion.div>
       </div>

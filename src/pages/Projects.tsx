@@ -203,7 +203,7 @@ const Projects = () => {
     }
   };
 
-  const uniqueYears = Array.from(new Set(projectsTimeline.map(p => p.year))).sort();
+  const uniqueYears = Array.from(new Set(projectsTimeline.map(p => p.year))).sort().reverse();
   
   const filteredProjects = projectsTimeline.filter(project => {
     const yearMatch = filterYear === "all" || project.year === filterYear;

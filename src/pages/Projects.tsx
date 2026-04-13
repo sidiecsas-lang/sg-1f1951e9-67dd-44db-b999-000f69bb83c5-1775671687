@@ -89,7 +89,7 @@ const projectsTimeline: ProjectDetail[] = [
     area: "168 m²",
     location: "Lago Agrio, Ecuador",
     category: "residential",
-    image: "/Villa-lago.jpg",
+    image: "/VillaLago.jpg",
     description: 'Acompáñame en este hermoso recorrido de una Villa de 117 m2 ubicada en Lago Agrio, Ecuador. El clima tropical y la necesidad de ventilación natural han determinado cubiertas inclinadas con mayores alturas con y volados generosos, todo en busca de la función y el confort climático.',
     youtubeUrl: 'https://www.youtube.com/watch?v=zkjOCWP5YD8'
   },
@@ -101,7 +101,7 @@ const projectsTimeline: ProjectDetail[] = [
     area: "241 m²",
     location: "Guayllabamba, Ecuador",
     category: "residential",
-    image: "/Residencia-de-un-musico.jpeg",
+    image: "/Residencia-de-Un-musico.png",
     description: 'De diseño minimalista, esta residencia tiene un amplio balcón frontal y una sala a doble altura, aprovechando las espectaculares visuales del terreno. Ubicada en Guayllabamba, la vivienda se implanta de forma aislada en un terreno de 840m2, con 200 m2 de área útil.',
     youtubeUrl: 'https://www.youtube.com/watch?v=Qhn-RHiFr5g'
   },

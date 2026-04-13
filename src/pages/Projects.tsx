@@ -21,6 +21,115 @@ interface ProjectDetail {
 
 const projectsTimeline: ProjectDetail[] = [
   {
+    year: "2026",
+    name: 'Residencias las Retamas',
+    type: "Residencia",
+    floors: "2 pisos",
+    area: "575 m²",
+    location: "Capelo, Ecuador",
+    category: "residential",
+    image: "/LasRetamas.jpg",
+    description: 'Dos modernas residencias de 215 m2 en dos plantas, desarrolladas en un terreno de 20 m de frente por 50 m de profundidad. El minimalismo de sus lineas rectas se conjungan con dobles alturas, con balcones y volados que trabajan en conjunto de acuerdo al soleamiento de este bello predio ubicado en Sangolqui - Ecuador.',
+    youtubeUrl: 'https://www.youtube.com/watch?v=a4BeSTizz5U&t=2s'
+  },
+  {
+    year: "2026",
+    name: 'Residencia Manto Verde',
+    type: "Residencia",
+    floors: "2 pisos",
+    area: "625 m²",
+    location: "La Armenia, Ecuador",
+    category: "residential",
+    image: "/Residencia-Manto-Verde.jpg",
+    description: 'En un terreno de 1000 m2 con frente a la curva de retorno de la vía de acceso se desarrolla Residencia Manto Verde en 400 m2. El programa arquitectónico incluye 3 habitaciones y variedad de zonas de ocio y esparcimiento. La implantación en L, y el juego de alturas en fachada han dado un resultado único de líneas rectas que contrastan con el patio frontal de ingreso de líneas curvas, tal cual es curvo el frente a la vía del terreno.',
+    youtubeUrl: 'https://youtu.be/Gvfqd5UjCFE?si=RkBIqlXDnhiNIGpN'
+  },
+  {
+    year: "2025",
+    name: 'Residencia del Encanto',
+    type: "Residencia",
+    floors: "2 pisos",
+    area: "594 m²",
+    location: "La Armenia, Ecuador",
+    category: "residential",
+    image: "/ReresidenciaDelEncanto.jpg",
+    description: 'En un terreno de 24m x 40 se desarrolla una vivienda para una joven familia con necesidades propias del día a día, pero pensada también en el desarrollo y crecimiento de sus pequeños niños. Con un Home Office de ensueño en donde las áreas de trabajo se conjugan con las de entretenimiento, en este caso la Música. Un diseño que ha cuidado cada detalle y requerimiento, sin descuidar la forma, funcionalidad y estética propia de la arquitectura del valle de Quito - Ecuador.',
+    youtubeUrl: 'https://www.youtube.com/watch?v=4i6sbW0LLt8&t=2s'
+  },
+  {
+    year: "2024",
+    name: 'Guayllabamba Gardens',
+    type: "Conjunto Habitacional",
+    units: "39 viviendas",
+    floors: "2 pisos",
+    area: "5.289 m²",
+    location: "Guayllabamba, Ecuador",
+    category: "residential",
+    image: "/GuayllabambaGardens.png",
+    description: '"Guayllabamba Gardens" se ubica en la parroquia de Guayllabamba del Distrito Metropolitano de Quito. El Conjunto cuenta con 39 viviendas en un terreno de 22572 m2. Se proyectan viviendas de 2 pisos aisladas de varias tipologías y metrajes. Siendo predominante el producto VIP, viviendas en 94 m2.',
+    youtubeUrl: 'https://www.youtube.com/watch?v=cAF7_r8ur3M'
+  },
+  {
+    year: "2024",
+    name: 'Mirano Valley',
+    type: "Conjunto Habitacional",
+    floors: "3 pisos",
+    area: "510 m²",
+    location: "Conocoto, Ecuador",
+    category: "residential",
+    image: "/MarinoValley.jpg",
+    description: 'En un terreno de 600 m2 hemos diseñado este proyecto inmobiliario en la ciudad de Quito, Valle de los chillos. Son viviendas de 100 m2 en 3 plantas. Hemos aprovechado el terreno y sus retiros al máximo posible, el resultado es increíble.',
+    youtubeUrl: 'https://www.youtube.com/watch?v=8GWdgnPiOY8'
+  },
+  {
+    year: "2024",
+    name: 'Villa Lago',
+    type: "Residencia",
+    floors: "1 piso",
+    area: "168 m²",
+    location: "Lago Agrio, Ecuador",
+    category: "residential",
+    image: "/Villa-lago.jpg",
+    description: 'Acompáñame en este hermoso recorrido de una Villa de 117 m2 ubicada en Lago Agrio, Ecuador. El clima tropical y la necesidad de ventilación natural han determinado cubiertas inclinadas con mayores alturas con y volados generosos, todo en busca de la función y el confort climático.',
+    youtubeUrl: 'https://www.youtube.com/watch?v=zkjOCWP5YD8'
+  },
+  {
+    year: "2024",
+    name: 'Residencia de un Músico',
+    type: "Residencia",
+    floors: "3 pisos",
+    area: "241 m²",
+    location: "Guayllabamba, Ecuador",
+    category: "residential",
+    image: "/Residencia-de-un-musico.jpeg",
+    description: 'De diseño minimalista, esta residencia tiene un amplio balcón frontal y una sala a doble altura, aprovechando las espectaculares visuales del terreno. Ubicada en Guayllabamba, la vivienda se implanta de forma aislada en un terreno de 840m2, con 200 m2 de área útil.',
+    youtubeUrl: 'https://www.youtube.com/watch?v=Qhn-RHiFr5g'
+  },
+  {
+    year: "2023",
+    name: 'Residencia Flia Sierra (Un solo Andar)',
+    type: "Residencia",
+    floors: "2 pisos",
+    area: "160 m²",
+    location: "Alangasí, Ecuador",
+    category: "residential",
+    image: "/ResidenciaUnSoloAndar.jpg",
+    description: 'La pureza de materiales predomina en esta composición de concepto minimallista cálido. Es una residencia de una sola planta con subsuelo, son 160 m2 en un terreno de 830 m2.',
+    youtubeUrl: 'https://www.youtube.com/watch?v=XZBCjgB_DQE'
+  },
+  {
+    year: "2023",
+    name: 'Residencia Dorada',
+    type: "Residencia",
+    floors: "2 pisos",
+    area: "340 m²",
+    location: "Guayllabamba, Ecuador",
+    category: "residential",
+    image: "/ResidenciaDorada.png",
+    description: 'Una Residencia de 340m2 diseñada para una hermosa pareja que se encuentra en sus años dorados, el maravilloso dormitorio master en planta baja contiene todos los servicio y accesos necesarios para dar mayor flexibilidad de uso y facilidad de ingreso a sus ocupantes, mientras que en planta alta se destinan espacios para visitas con terraza abierta junto a un estudio con vista panorámica de ensueño. Es un terreno de 484m2 con curvatura en el frente, esta forma particular nos genera una implantación inigualable con perspectivas únicas y singulares desde cada uno de los ambientes.',
+    youtubeUrl: 'https://www.youtube.com/watch?v=ehLMdjWXbaw&t=67s'
+  },
+  {
     year: "2022",
     name: 'Residencia Santa Clara',
     type: "Residencia",
@@ -55,79 +164,6 @@ const projectsTimeline: ProjectDetail[] = [
     image: "/ResidenciaTragaluz.png",
     description: 'Amamos los terreno a desnivel, estos permiten generar volúmenes y funciones nuevas en lugares inesperados, como es el caso de los parqueaderos en subsuelos para esta residencia minimalista de 276m2 implantada en un terreno de 600m2.',
     youtubeUrl: 'https://www.youtube.com/watch?v=PKK7rYcnSsU'
-  },
-  {
-    year: "2023",
-    name: 'Residencia Flia Sierra (Un solo Andar)',
-    type: "Residencia",
-    floors: "2 pisos",
-    area: "160 m²",
-    location: "Alangasí, Ecuador",
-    category: "residential",
-    image: "/ResidenciaUnSoloAndar.jpg",
-    description: 'La pureza de materiales predomina en esta composición de concepto minimallista cálido. Es una residencia de una sola planta con subsuelo, son 160 m2 en un terreno de 830 m2.',
-    youtubeUrl: 'https://www.youtube.com/watch?v=XZBCjgB_DQE'
-  },
-  {
-    year: "2023",
-    name: 'Residencia Dorada',
-    type: "Residencia",
-    floors: "2 pisos",
-    area: "340 m²",
-    location: "Guayllabamba, Ecuador",
-    category: "residential",
-    image: "/ResidenciaDorada.png",
-    description: 'Una Residencia de 340m2 diseñada para una hermosa pareja que se encuentra en sus años dorados, el maravilloso dormitorio master en planta baja contiene todos los servicio y accesos necesarios para dar mayor flexibilidad de uso y facilidad de ingreso a sus ocupantes, mientras que en planta alta se destinan espacios para visitas con terraza abierta junto a un estudio con vista panorámica de ensueño. Es un terreno de 484m2 con curvatura en el frente, esta forma particular nos genera una implantación inigualable con perspectivas únicas y singulares desde cada uno de los ambientes.',
-    youtubeUrl: 'https://www.youtube.com/watch?v=ehLMdjWXbaw&t=67s'
-  },
-  {
-    year: "2024",
-    name: 'Guayllabamba Gardens',
-    type: "Conjunto Habitacional",
-    units: "39 viviendas",
-    floors: "2 pisos",
-    area: "5.289 m²",
-    location: "Guayllabamba, Ecuador",
-    category: "residential",
-    image: "/GuayllabambaGardens.png",
-    description: '“Guayllabamba Gardens” se ubica en la parroquia de Guayllabamba del Distrito Metropolitano de Quito. El Conjunto cuenta con 39 viviendas en un terreno de 22572 m2. Se proyectan viviendas de 2 pisos aisladas de varias tipologías y metrajes. Siendo predominante el producto VIP, viviendas en 94 m2.',
-    youtubeUrl: 'https://www.youtube.com/watch?v=cAF7_r8ur3M'
-  },
-  {
-    year: "2024",
-    name: 'Mirano Valley',
-    type: "Conjunto Habitacional",
-    floors: "3 pisos",
-    area: "510 m²",
-    location: "Conocoto, Ecuador",
-    category: "residential",
-    image: "/MarinoValley.jpg",
-    description: 'En un terreno de 600 m2 hemos diseñado este proyecto inmobiliario en la ciudad de Quito, Valle de los chillos. Son viviendas de 100 m2 en 3 plantas. Hemos aprovechado el terreno y sus retiros al máximo posible, el resultado es increíble.',
-    youtubeUrl: 'https://www.youtube.com/watch?v=8GWdgnPiOY8'
-  },
-  {
-    year: "2025",
-    name: 'Residencia del Encanto',
-    type: "Residencia",
-    floors: "2 pisos",
-    area: "594 m²",
-    location: "La Armenia, Ecuador",
-    category: "residential",
-    image: "/ReresidenciaDelEncanto.jpg",
-    description: 'En un terreno de 24m x 40 se desarrolla una vivienda para una joven familia con necesidades propias del día a día, pero pensada también en el desarrollo y crecimiento de sus pequeños niños. Con un Home Office de ensueño en donde las áreas de trabajo se conjugan con las de entretenimiento, en este caso la Música. Un diseño que ha cuidado cada detalle y requerimiento, sin descuidar la forma, funcionalidad y estética propia de la arquitectura del valle de Quito - Ecuador.',
-    youtubeUrl: 'https://www.youtube.com/watch?v=4i6sbW0LLt8&t=2s'
-  },
-  {
-    year: "2026",
-    name: 'Residencias las Retamas',
-    type: "Residencia",
-    floors: "2 pisos",
-    area: "575 m²",
-    location: "Capelo, Ecuador",
-    category: "residential",
-    image: "/LasRetamas.jpg",
-    description: 'Dos modernas residencias de 215 m2 en dos plantas, desarrolladas en un terreno de 20 m de frente por 50 m de profundidad. El minimalismo de sus lineas rectas se conjungan con dobles alturas, con balcones y volados que trabajan en conjunto de acuerdo al soleamiento de este bello predio ubicado en Sangolqui - Ecuador.',
-    youtubeUrl: 'https://www.youtube.com/watch?v=a4BeSTizz5U&t=2s'
   }
 ];
 

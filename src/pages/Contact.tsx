@@ -144,7 +144,7 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             className="mb-8 text-center"
           >
-            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">Nuestro Instagram</h2>
+            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">Encuéntranos en las redes sociales como:</h2>
             <a 
               href="https://www.instagram.com/cristina.granda.t/" 
               target="_blank" 
@@ -231,7 +231,7 @@ const Contact = () => {
                 className="w-full md:w-auto bg-[#25D366] hover:bg-[#20BA5A] text-white px-8 py-6 text-base tracking-luxury uppercase shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <MessageCircle className="w-6 h-6 mr-3" />
-                Contactar por WhatsApp
+                Contactar
               </Button>
             </div>
             <p className="text-sm text-muted-foreground mt-6">+593 98 455 5979</p>

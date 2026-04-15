@@ -350,9 +350,15 @@ const Projects = () => {
 
                     {/* El Lado del Año */}
                     <div className={`hidden md:flex w-1/2 ${index % 2 === 0 ? "justify-end text-right" : "justify-start text-left"}`}>
-                      <div className="font-heading text-7xl md:text-8xl lg:text-[10rem] font-bold text-foreground/30 select-none drop-shadow-sm">
+                      <motion.div 
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 0.3, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="font-heading text-7xl md:text-8xl lg:text-[10rem] font-bold text-foreground select-none drop-shadow-sm"
+                      >
                         {project.year}
-                      </div>
+                      </motion.div>
                     </div>
 
                     {/* Tarjeta del Proyecto */}
@@ -362,24 +368,36 @@ const Projects = () => {
                       {/* Punto para móvil */}
                       <div className="absolute left-8 -translate-x-[5.5px] top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary ring-8 ring-background z-10 md:hidden" />
 
-                      <button
+                      <motion.button
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ duration: 0.6, delay: index * 0.1 }}
                         onClick={() => setSelectedProject(project)}
                         className={`w-full text-left group bg-card border border-border hover:border-primary/50 transition-all duration-500 overflow-hidden cursor-pointer rounded-xl shadow-sm hover:shadow-xl`}
                       >
                         {/* Imagen de la tarjeta */}
                         <div className="relative h-64 w-full overflow-hidden bg-muted flex items-center justify-center">
-                           {project.image ? (
-                             <img 
-                               src={project.image} 
-                               alt={project.name} 
-                               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                             />
-                           ) : (
-                             <div className="w-full h-full bg-muted/50 flex flex-col items-center justify-center text-muted-foreground/30 transition-transform duration-700 group-hover:scale-105">
-                                <Building2 className="w-20 h-20 mb-4 opacity-50" />
-                                <span className="text-xs tracking-luxury uppercase">Próximamente</span>
-                             </div>
-                           )}
+                           <motion.div
+                             initial={{ opacity: 0, scale: 1.1 }}
+                             whileInView={{ opacity: 1, scale: 1 }}
+                             viewport={{ once: true }}
+                             transition={{ duration: 0.8 }}
+                             className="w-full h-full"
+                           >
+                             {project.image ? (
+                               <img 
+                                 src={project.image} 
+                                 alt={project.name} 
+                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                               />
+                             ) : (
+                               <div className="w-full h-full bg-muted/50 flex flex-col items-center justify-center text-muted-foreground/30 transition-transform duration-700 group-hover:scale-105">
+                                  <Building2 className="w-20 h-20 mb-4 opacity-50" />
+                                  <span className="text-xs tracking-luxury uppercase">Próximamente</span>
+                               </div>
+                             )}
+                           </motion.div>
 
                            {/* Overlay gradiente */}
                            <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
@@ -431,7 +449,7 @@ const Projects = () => {
                             <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
                           </div>
                         </div>
-                      </button>
+                      </motion.button>
                     </div>
                   </motion.div>
                 ))}
